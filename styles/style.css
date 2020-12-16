@@ -589,7 +589,6 @@ nav ul li a {
 .section2 figure {
   width: 400px;
   margin: 190px 0 0 -100px;
-  width: calc(5% + 370px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

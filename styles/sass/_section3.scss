@@ -16,7 +16,7 @@
 .portfolio {
     display: flex;
     justify-content: space-between;
-    padding: 50px 0 35px 0;
+    padding: 50px 0 10px 0;
     h3 {
       color: $headerColor;
       &:after {
@@ -28,6 +28,19 @@
 
 // Flickity Carousel // Adjusted Code from flickity.com
 
+.instructions {
+  color: $headerColor;
+  font-size: 1.6rem;
+}
+.instructions a {
+    padding: 8px 2px;
+    @include secondaryFont(1.6rem);
+  }
+
+.instructions {
+  padding-bottom: 10px;
+}
+
 .carousel-cell {
   width: 58%; 
   height: 450px;
@@ -38,6 +51,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+}
+
+.instructions a, .linksToProjects a{
+  text-decoration: underline;
+  text-decoration-color: $accentColor;
+  text-underline-offset: 0.5rem;
+  text-decoration-thickness: 0.2rem;
 }
 
 .moreInfoHover {
@@ -60,10 +80,6 @@
     display: flex;
     margin-left: -15px;
     a {
-      text-decoration: underline;
-      text-decoration-color: $accentColor;
-      text-underline-offset: 0.5rem;
-      text-decoration-thickness: 0.2rem;
       display: block;
       padding: 10px 5px;
       margin: 0 10px;

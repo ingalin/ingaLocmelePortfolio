@@ -340,7 +340,7 @@ hr {
 /* Main Header background */
 header {
   background-color: #353535;
-  background-image: url(./assets/IMG_1297_.jpg);
+  background-image: url(./assets/IMG_1297.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 600px;
@@ -672,7 +672,7 @@ nav ul li a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 50px 0 35px 0;
+  padding: 50px 0 10px 0;
 }
 
 .portfolio h3 {
@@ -682,6 +682,22 @@ nav ul li a {
 .portfolio h3:after {
   background: #e45507;
   bottom: 3.2rem;
+}
+
+.instructions {
+  color: #ffffff;
+  font-size: 1.6rem;
+}
+
+.instructions a {
+  padding: 8px 2px;
+  font-family: 'Lato', sans-serif;
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+
+.instructions {
+  padding-bottom: 10px;
 }
 
 .carousel-cell {
@@ -698,6 +714,14 @@ nav ul li a {
   background-size: cover;
   background-repeat: no-repeat;
   position: relative;
+}
+
+.instructions a, .linksToProjects a {
+  text-decoration: underline;
+  -webkit-text-decoration-color: #e45507;
+          text-decoration-color: #e45507;
+  text-underline-offset: 0.5rem;
+  text-decoration-thickness: 0.2rem;
 }
 
 .moreInfoHover {
@@ -728,11 +752,6 @@ nav ul li a {
 }
 
 .moreInfoHover .linksToProjects a {
-  text-decoration: underline;
-  -webkit-text-decoration-color: #e45507;
-          text-decoration-color: #e45507;
-  text-underline-offset: 0.5rem;
-  text-decoration-thickness: 0.2rem;
   display: block;
   padding: 10px 5px;
   margin: 0 10px;
@@ -1051,6 +1070,11 @@ input::placeholder, textarea::placeholder {
 
 .submit:hover, .submit:focus {
   border: 3px solid #e45507;
+  text-decoration: underline;
+  -webkit-text-decoration-color: #e45507;
+          text-decoration-color: #e45507;
+  text-underline-offset: 0.7rem;
+  text-decoration-thickness: 0.2rem;
 }
 
 input:hover, input:focus, textarea:hover, textarea:focus {

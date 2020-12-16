@@ -853,6 +853,8 @@
         // Added to add focus on selected item //Inga
     $(".is-selected").attr('tabindex', 0);
     $(".is-selected").prop('disabled', false).removeClass("noHover").removeClass("noFocus");
+    $(".dot").attr('tabindex', -1);
+    $(".flickity-page-dots").attr('tabindex', -1);
   };
 
 
@@ -860,12 +862,16 @@
   let classTrue = false;
   $(".carousel-cell").on('click', function () {
     if (classTrue == true) {
-      $(".is-selected").find(".moreInfoHover").removeClass("show");
+      $(".is-selected").find(".moreInfoHover").removeClass("show").removeClass("noHover");
+      $(".dot").attr('tabindex', -1);
+      $(".flickity-page-dots").attr('tabindex', -1);
       classTrue = false;
     }
     else {
       $(".is-selected").attr('tabindex', 0).find(".moreInfoHover").addClass("show");
       $(".is-selected").prop('disabled', false).removeClass("noHover").removeClass("noFocus");
+      $(".dot").attr('tabindex', -1);
+      $(".flickity-page-dots").attr('tabindex', -1);
       classTrue = true;
     }
   });
@@ -877,8 +883,11 @@
     // Added to hide more information and hide focus from other items (which are not shown)//Inga
     $("button").find(".moreInfoHover").removeClass("show");
     $(".carousel-cell").prop('disabled', true).attr('tabindex', -1).addClass("noHover").addClass("noFocus");
+    $(".dot").attr('tabindex', -1);
+    $(".flickity-page-dots").attr('tabindex', -1);
     classTrue = false;
   };
+
 
   /**
    * @param {Integer} factor - 0, 1, or -1

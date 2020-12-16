@@ -1,0 +1,100 @@
+// Form Send Message
+
+form {
+    background-color: $headerColorTransparent;
+    padding: 40px 100px;
+}
+
+footer h3 {
+    text-align: center;
+    padding-top: 20px;
+    background-color: $headerColor;
+    margin: 40px 0 0;
+    &:after {
+    content:none;
+    }
+}
+
+footer .contacHeadding {
+    text-align: center;
+    color: $accentColor;
+    padding-top: 20px;
+    background-color: $headerColor;
+    text-transform: uppercase;
+}
+
+.inputFields {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+input, textarea {
+    padding: 20px 20px 10px 5px;
+    border-width: 0 0 2px 0; 
+    border-style: solid;
+    border-color: $backgroundDarkTransparent;
+}
+
+textarea {
+    height: 200px;
+    resize: none;
+    width: calc(100% - 10px);
+}
+
+label {
+    padding-top: 20px;
+    color: $accentColor;
+    display: block;
+}
+
+.textareaInput {
+    display: flex;
+    justify-content: space-between;
+}
+
+.requiredFields {
+    display: flex;
+    input {
+        width: calc(100% - 10px);
+    }
+}
+
+input::placeholder, textarea::placeholder {
+    @include mainFont(1.6rem);
+    color: $backgroundDarkTransparentDarker;
+    font-weight: 700;
+    // opacity: 0.7;
+}
+
+.requiredFields, input[type="tel"] {
+    margin-bottom: 20px;
+    width: calc(100%/3 - 30px);
+}
+
+.submitButton {
+    display: flex;
+    justify-content: center;
+}
+
+.submit {
+    width: 250px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    padding: 18px 30px;
+    background-color: $focusColor;
+    border: 3px solid transparent;
+}
+
+.submit:hover, .submit:focus {
+    border: 3px solid $accentColor;
+}
+
+
+input:hover, input:focus, textarea:hover, textarea:focus {
+    border-color: $accentColor;
+    background-color: $mainColorTransparent2;
+}
+
+
+

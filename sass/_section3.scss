@@ -1,0 +1,174 @@
+// paarlikt mazaakus images mobile!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+.section3Background {
+    background-image: url(./assets/IMG_1489.jpg);
+    max-width: 1500px;
+    width: 95%;
+    margin: 0 auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 655px;
+    height: 100vh;
+    background-position: center center;
+}
+
+.portfolio {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0 35px 0;
+    h3 {
+      color: $headerColor;
+      &:after {
+        background: $accentColor;
+        bottom: 3.2rem;
+      }
+    }
+}
+
+// Flickity Carousel // Adjusted Code from flickity.com
+
+.carousel-cell {
+  width: 58%; 
+  height: 450px;
+  margin: 0 5px;
+  display: flex;
+  justify-content: center;
+  background-image: url(./assets/IMG_1265.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.moreInfoHover {
+  position: absolute;
+  display: none;
+  top: 5%;
+  width: 92%;
+  background-color: $mainColorTransparent1;
+  height: 90%;
+  padding: 30px;
+  text-align: left;
+  h3 {
+    padding: 40px 0 0;
+    font-size: 3.4rem;
+    &:after {
+      content:none;
+    }
+  }
+  .linksToProjects {
+    display: flex;
+    margin-left: -15px;
+    a {
+      text-decoration: underline;
+      text-decoration-color: $accentColor;
+      text-underline-offset: 0.5rem;
+      text-decoration-thickness: 0.2rem;
+      display: block;
+      padding: 10px 5px;
+      margin: 0 10px;
+      min-width: 120px;
+      text-align: center;
+    }
+    p {
+      padding-top: 15px;
+    }
+  }
+  p {
+    color: $headerColor;
+    font-weight: lighter;
+    text-align: left;
+  }
+  .programsUsed {
+    display: flex;
+    p {
+      font-size: 2rem;
+      margin: 40px 20px 50px 0;
+      padding: 10px;
+      background-color: $backgroundDarkTransparent;
+    }
+  }
+}
+
+.is-selected:hover .moreInfoHover {
+  display: block;
+}
+
+.is-selected {
+  border: 2px solid transparent;
+}
+
+.is-selected:focus {
+  border: 2px solid $accentColor;
+}
+
+// Button
+/* rounded square */
+.flickity-button {
+  background: $accentColor;
+  border: 1px transparent solid;
+}
+.flickity-button:hover, .flickity-button:focus {
+  background: $focusColor;
+  $headerColor: 1px $headerColor solid;
+}
+
+.flickity-prev-next-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+}
+/* icon color */
+.flickity-button-icon {
+  fill: $headerColor;
+}
+/* position outside */
+.flickity-prev-next-button.previous {
+  left: 150px;
+}
+.flickity-prev-next-button.next {
+  right: 150px;
+}
+
+// Add a carousel :focus style style to aid accessibility. When focused, users can navigate the carousel with their keyboard.
+.flickity-enabled:focus .flickity-viewport {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+// Dots
+/* position dots in carousel */
+.flickity-page-dots {
+  bottom: -40px;
+}
+/* white circles */
+.flickity-page-dots .dot {
+  width: 15px;
+  height: 15px;
+  opacity: 1;
+  background: transparent;
+  border: 2px solid $headerColor;
+}
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+  background: $accentColor;
+}
+
+// If cell is not selected, disable focus and hover for better accesibility (added by me in flickity.js)
+.noHover {
+  pointer-events: none;
+}
+
+.noFocus:focus {
+  outline:0;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+

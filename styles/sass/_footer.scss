@@ -4,6 +4,9 @@
     background-repeat: no-repeat;
     min-height: 600px;
     background-position: center center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 footer {

@@ -19,9 +19,8 @@
 }
 
 .section2 figure {
-    width: 400px;
     margin: 190px 0 0 -100px;
-    // width: calc(5% + 370px);
+    width: calc(5% + 370px);
     display: flex;
 }
 
@@ -34,7 +33,7 @@
     justify-content: space-between;
     padding: 50px 0;
     figure {
-        width: 100%;
+        width: 120px;
         margin: 0;
         height: 50%;
         display: flex;

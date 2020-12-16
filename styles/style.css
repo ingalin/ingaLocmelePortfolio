@@ -587,8 +587,8 @@ nav ul li a {
 }
 
 .section2 figure {
-  width: 400px;
   margin: 190px 0 0 -100px;
+  width: calc(5% + 370px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -611,7 +611,7 @@ nav ul li a {
 }
 
 .skills figure {
-  width: 100%;
+  width: 120px;
   margin: 0;
   height: 50%;
   display: -webkit-box;

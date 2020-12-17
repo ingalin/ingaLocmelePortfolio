@@ -605,7 +605,7 @@ nav ul li a {
   border-image-slice: 1;
 }
 
-.section2 figure {
+.box figure {
   margin: 190px 0 0 -100px;
   width: calc(5% + 370px);
   display: -webkit-box;
@@ -791,11 +791,13 @@ nav ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .programsUsed p {
   font-size: 1.9rem;
-  margin: 40px 20px 50px 0;
+  margin: 40px 10px 50px 0;
   padding: 10px;
   background-color: rgba(53, 53, 53, 0.3);
 }
@@ -1272,4 +1274,69 @@ input:hover, input:focus, textarea:hover, textarea:focus {
 
 .projectsFooter {
   padding-bottom: 220px;
+}
+
+@media (max-width: 1266px) {
+  nav ul li {
+    margin-left: 10px;
+  }
+  .headingText {
+    margin-left: 5%;
+    width: 100%;
+    margin-right: 5%;
+  }
+  .aboutText {
+    width: calc(65% - 40px);
+    padding-top: 10px;
+  }
+  .aboutImg img {
+    margin: -35px 0 0 45px;
+  }
+  .details {
+    margin-top: 20px;
+  }
+  .section2 .box {
+    width: 25%;
+  }
+  .box figure {
+    margin: 190px 0 0 -150px;
+  }
+  .skills {
+    margin-left: 5%;
+    width: 100%;
+  }
+  .skills figure {
+    width: 100px;
+  }
+  .skillSets {
+    width: 70%;
+    margin-left: 0;
+  }
+  .carousel-cell {
+    width: 90%;
+  }
+  .section3Background {
+    max-width: 100%;
+    width: 100%;
+  }
+  .flickity-prev-next-button.previous {
+    left: 70px;
+  }
+  .flickity-prev-next-button.next {
+    right: 70px;
+  }
+  .moreInfoHover {
+    width: 70%;
+    padding: 25px;
+  }
+  .moreInfoHover h3 {
+    padding: 20px 0 0;
+    font-size: 2.8rem;
+  }
+  .moreInfoHover .programsUsed p {
+    padding: 5px;
+  }
+  form {
+    padding: 30px 20px;
+  }
 }

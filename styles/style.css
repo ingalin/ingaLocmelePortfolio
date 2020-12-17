@@ -345,7 +345,7 @@ hr {
   background-image: url(./assets/IMG_1297.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 600px;
+  min-height: 605px;
   height: 100vh;
   background-position: center center;
   display: -webkit-box;
@@ -481,7 +481,7 @@ nav ul li a {
   background-image: url(./assets/IMG_1265_.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 500px;
+  min-height: 600px;
   height: 85vh;
   background-position: center center;
   padding: 50px 0;
@@ -498,7 +498,7 @@ nav ul li a {
 }
 
 .aboutText {
-  width: calc(60% - 40px);
+  width: calc(65% - 80px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -509,8 +509,16 @@ nav ul li a {
   padding-top: 50px;
 }
 
+.aboutText h3 {
+  margin: 0;
+}
+
+.aboutText p {
+  padding-top: 20px;
+}
+
 .aboutImg {
-  width: calc(40% - 50px);
+  width: calc(35% - 20px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -541,6 +549,9 @@ nav ul li a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 40px;
 }
 
@@ -555,6 +566,7 @@ nav ul li a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: calc(50% - 20px);
 }
 
 .details2 div {
@@ -564,6 +576,10 @@ nav ul li a {
 
 .details2 div span {
   display: block;
+}
+
+.details2 p {
+  padding-top: 0;
 }
 
 .section2 {
@@ -662,7 +678,7 @@ nav ul li a {
   margin: 0 auto;
   background-size: cover;
   background-repeat: no-repeat;
-  min-height: 655px;
+  min-height: 680px;
   height: 100vh;
   background-position: center center;
 }
@@ -674,7 +690,7 @@ nav ul li a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 50px 0 10px 0;
+  padding: 50px 0 0 0;
 }
 
 .portfolio h3 {
@@ -704,7 +720,7 @@ nav ul li a {
 
 .carousel-cell {
   width: 58%;
-  height: 450px;
+  height: 470px;
   margin: 0 5px;
   display: -webkit-box;
   display: -ms-flexbox;

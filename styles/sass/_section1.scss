@@ -2,7 +2,7 @@
     background-image: url(./assets/IMG_1265_.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 500px;
+    min-height: 600px;
     height: 85vh;
     background-position: center center;
     padding: 50px 0;
@@ -15,14 +15,20 @@
 }
 
 .aboutText {
-    width: calc(60% - 40px);
+    width: calc(65% - 80px);
     display: flex;
     flex-direction: column;
     padding-top: 50px;
+    h3 {
+        margin: 0;
+    }
+    p {
+        padding-top: 20px;
+    }
 }
 
 .aboutImg {
-    width: calc(40% - 50px);
+    width: calc(35% - 20px);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -46,6 +52,7 @@
 
 .details {
     display: flex;
+    justify-content: space-between;
     margin-top: 40px;
     img {
         width: 15%;
@@ -55,12 +62,16 @@
 .details2 {
     display: flex;
     justify-content: space-between;
+    width: calc(50% - 20px);
     div {
         margin-left: 20px;
         margin-bottom: -50px;
         span {
             display: block;
         }
+    }
+    p {
+        padding-top: 0;
     }
 }
 

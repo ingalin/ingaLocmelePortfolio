@@ -9,7 +9,7 @@
     margin: 0 auto;
     background-size: cover;
     background-repeat: no-repeat;
-    min-height: 655px;
+    min-height: 680px;
     height: 100vh;
     background-position: center center;
 }
@@ -17,7 +17,7 @@
 .portfolio {
     display: flex;
     justify-content: space-between;
-    padding: 50px 0 10px 0;
+    padding: 50px 0 0 0;
     h3 {
       color: $headerColor;
       &:after {
@@ -44,7 +44,7 @@
 
 .carousel-cell {
   width: 58%; 
-  height: 450px;
+  height: 470px;
   margin: 0 5px;
   display: flex;
   justify-content: center;

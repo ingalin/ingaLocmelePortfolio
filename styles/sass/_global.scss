@@ -2,6 +2,8 @@
 $backgroundDark: #353535;
 $backgroundDarkTransparent: rgba(53, 53, 53, 0.3);
 $backgroundDarkTransparentDarker: rgba(53, 53, 53, 0.7);
+$backgroundDarkTransparentDarker2: rgba(53, 53, 53, 0.85);
+// $backgroundDarkTransparentDarker3: rgba(53, 53, 53, 0.65);
 $mainColor: #ae4b15;
 $mainColorTransparent: rgba(174,75,21,0.85);
 $mainColorTransparent1: rgba(174,75,21,0.95);
@@ -82,7 +84,9 @@ ul {
 
 p {
     color: $paragraphColor;
-    font-weight: 700;
+    font-weight: 600;
+    line-height: 3rem;
+    letter-spacing: 0.8px;
 }
 
 h1 {

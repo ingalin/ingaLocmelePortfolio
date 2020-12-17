@@ -284,7 +284,9 @@ ul {
 
 p {
   color: #515151;
-  font-weight: 700;
+  font-weight: 600;
+  line-height: 3rem;
+  letter-spacing: 0.8px;
 }
 
 h1 {
@@ -338,7 +340,7 @@ hr {
 }
 
 /* Main Header background */
-header {
+.indexHeader {
   background-color: #353535;
   background-image: url(./assets/IMG_1297.jpg);
   background-size: cover;
@@ -736,31 +738,12 @@ nav ul li a {
 }
 
 .moreInfoHover h3 {
-  padding: 40px 0 0;
+  padding: 20px 0 0;
   font-size: 3.4rem;
 }
 
 .moreInfoHover h3:after {
   content: none;
-}
-
-.moreInfoHover .linksToProjects {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: -15px;
-}
-
-.moreInfoHover .linksToProjects a {
-  display: block;
-  padding: 10px 5px;
-  margin: 0 10px;
-  min-width: 120px;
-  text-align: center;
-}
-
-.moreInfoHover .linksToProjects p {
-  padding-top: 15px;
 }
 
 .moreInfoHover p {
@@ -769,14 +752,33 @@ nav ul li a {
   text-align: left;
 }
 
-.moreInfoHover .programsUsed {
+.linksToProjects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: -15px;
+}
+
+.linksToProjects a {
+  display: block;
+  padding: 10px 5px;
+  margin: 0 10px;
+  min-width: 120px;
+  text-align: center;
+}
+
+.linksToProjects p {
+  padding-top: 5px;
+}
+
+.programsUsed {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.moreInfoHover .programsUsed p {
-  font-size: 2rem;
+.programsUsed p {
+  font-size: 1.9rem;
   margin: 40px 20px 50px 0;
   padding: 10px;
   background-color: rgba(53, 53, 53, 0.3);
@@ -883,7 +885,7 @@ nav ul li a {
 }
 
 footer {
-  padding: 50px 0 320px;
+  padding: 50px 0 220px;
 }
 
 .contact {
@@ -905,7 +907,7 @@ footer {
           align-items: center;
   border: 1px solid rgba(53, 53, 53, 0.3);
   padding: 30px 20px;
-  min-width: 300px;
+  min-width: 320px;
   background-color: rgba(255, 255, 255, 0.5);
 }
 
@@ -942,6 +944,50 @@ footer {
   border-style: solid;
   border-color: #e45507;
   padding: 15px 0;
+}
+
+.projectsHeader a, .footerBackground a {
+  color: rgba(53, 53, 53, 0.85);
+}
+
+.projectsHeader a:hover, .projectsHeader a:focus, .footerBackground a:hover, .footerBackground a:focus {
+  color: #ffffff;
+  border: 1px solid #e45507;
+}
+
+.icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 70px 0 0;
+}
+
+.icons li {
+  padding: 2.5px;
+}
+
+.icons li a {
+  padding: 20px 18px 10px;
+  border: 3px solid transparent;
+}
+
+.icons i {
+  font-size: 2.5rem;
+  color: rgba(53, 53, 53, 0.7);
+}
+
+.icons a:hover i, .icons a:focus i {
+  color: #e45507;
+}
+
+.icons a:hover, .icons a:focus {
+  border-width: 3px;
+  border-style: solid;
+  border-color: transparent transparent #e45507 transparent;
+  background-color: transparent;
 }
 
 form {
@@ -1080,4 +1126,134 @@ input::placeholder, textarea::placeholder {
 input:hover, input:focus, textarea:hover, textarea:focus {
   border-color: #e45507;
   background-color: rgba(174, 75, 21, 0.07);
+}
+
+.projectsHeader {
+  border-width: 0 0 2px 0;
+  border-style: solid;
+  border-color: rgba(53, 53, 53, 0.3);
+  margin-bottom: 50px;
+  padding: 0 15px 30px 0;
+}
+
+.footerBackground nav ul {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 0 10px;
+}
+
+.projectsMain h2 {
+  font-size: 9.4rem;
+  color: #e45507;
+  font-weight: 300;
+}
+
+.projectsMain h3 {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.projectsMain h3:after {
+  content: none;
+}
+
+.projectsMain h4 {
+  font-size: 3.1rem;
+  color: #333333;
+}
+
+.projectsMain p {
+  padding-top: 20px;
+}
+
+.projectsMain figure {
+  max-height: 470px;
+  margin-top: 50px;
+}
+
+.selectProject {
+  background-image: url(./assets/IMG_1265_.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 20px 0;
+}
+
+.projectDescription {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.projectDescription figure, .eachProjectDetails {
+  width: calc(50% - 30px);
+}
+
+.eachProjectDetails {
+  color: #333333;
+}
+
+.eachProjectDetails .programsUsed p {
+  padding: 8px 10px;
+  background-color: rgba(53, 53, 53, 0.7);
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.eachProjectDetails .linksToProjects a {
+  color: #e45507;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.eachProjectDetails .linksToProjects a:hover, .eachProjectDetails .linksToProjects a:focus {
+  color: #ffffff;
+  border: 1px solid #e45507;
+}
+
+.selectProject .linksToProjects p {
+  padding-top: 8px;
+}
+
+.linksToProjects {
+  margin-top: 20px;
+}
+
+.linksToProjects a:hover, .linksToProjects a:focus {
+  color: #ffffff;
+}
+
+.changeFlexDirection {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.changeFlexDirection .eachProjectDetails {
+  margin-top: 50px;
+}
+
+.projectsMain .eventImage {
+  margin-top: 100px;
+}
+
+.footerContact {
+  background-image: url(./assets/IMG_89700small.jpg);
+}
+
+.projectsFooter {
+  padding-bottom: 220px;
 }

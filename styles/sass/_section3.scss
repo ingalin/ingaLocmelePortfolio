@@ -1,4 +1,5 @@
 // paarlikt mazaakus images mobile!!!!!!!!!!!!!!!!!!!!!!!!!!!
+//Flickity apskatiit aria-label
 
 
 .section3Background {
@@ -70,24 +71,10 @@
   padding: 30px;
   text-align: left;
   h3 {
-    padding: 40px 0 0;
+    padding: 20px 0 0;
     font-size: 3.4rem;
     &:after {
       content:none;
-    }
-  }
-  .linksToProjects {
-    display: flex;
-    margin-left: -15px;
-    a {
-      display: block;
-      padding: 10px 5px;
-      margin: 0 10px;
-      min-width: 120px;
-      text-align: center;
-    }
-    p {
-      padding-top: 15px;
     }
   }
   p {
@@ -95,14 +82,30 @@
     font-weight: lighter;
     text-align: left;
   }
-  .programsUsed {
-    display: flex;
-    p {
-      font-size: 2rem;
-      margin: 40px 20px 50px 0;
-      padding: 10px;
-      background-color: $backgroundDarkTransparent;
-    }
+}
+
+.linksToProjects {
+  display: flex;
+  margin-left: -15px;
+  a {
+    display: block;
+    padding: 10px 5px;
+    margin: 0 10px;
+    min-width: 120px;
+    text-align: center;
+  }
+  p {
+    padding-top: 5px;
+  }
+}
+
+.programsUsed {
+  display: flex;
+  p {
+    font-size: 1.9rem;
+    margin: 40px 20px 50px 0;
+    padding: 10px;
+    background-color: $backgroundDarkTransparent;
   }
 }
 

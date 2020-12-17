@@ -862,7 +862,7 @@
   let classTrue = false;
   $(".carousel-cell").on('click', function () {
     if (classTrue == true) {
-      $(".is-selected").find(".moreInfoHover").removeClass("show").removeClass("noHover");
+      $(".is-selected").find(".moreInfoHover").removeClass("show").addClass("noHover");
       $(".dot").attr('tabindex', -1);
       $(".flickity-page-dots").attr('tabindex', -1);
       classTrue = false;

@@ -10,7 +10,7 @@
 }
 
 footer {
-    padding: 50px 0 320px;
+    padding: 50px 0 220px;
 }
 
 .contact {
@@ -22,7 +22,7 @@ footer {
         align-items: center;
         border: 1px solid $backgroundDarkTransparent;
         padding: 30px 20px;
-        min-width: 300px;
+        min-width: 320px;
         background-color: $headerColorTransparent;
     }
     figure {
@@ -55,5 +55,44 @@ footer {
         border-color: $accentColor;
         padding: 15px 0;
     }
+}
+
+.projectsHeader a, .footerBackground a {
+    color: $backgroundDarkTransparentDarker2;
+    &:hover, &:focus {
+        color: $headerColor;
+        border: 1px solid $accentColor;
+    }
+}
+
+// Social icon list
+
+.icons {
+    display: flex;
+    justify-content: center;
+    margin: 70px 0 0;
+    li {
+    padding: 2.5px;
+        a {
+            padding: 20px 18px 10px;
+            border: 3px solid transparent;
+        }
+    }
+}
+
+.icons i {
+    font-size: 2.5rem;
+    color: $backgroundDarkTransparentDarker;
+}
+
+.icons a:hover i, .icons a:focus i {
+    color: $accentColor;
+}
+
+.icons a:hover, .icons a:focus {
+    border-width: 3px; 
+    border-style: solid;
+    border-color: transparent transparent $accentColor transparent;
+    background-color: transparent;
 }
 

@@ -1,0 +1,110 @@
+.projectsHeader {
+    border-width: 0 0 2px 0; 
+    border-style: solid;
+    border-color: $backgroundDarkTransparent;
+    margin-bottom: 50px;
+    padding: 0 15px 30px 0;
+}
+
+.footerBackground nav ul {
+    justify-content: center;
+    padding: 10px 0 10px;
+}
+
+.projectsMain {
+    h2 {
+        font-size: 9.4rem;
+        color: $accentColor;
+        font-weight: 300;
+    }
+    h3 {
+        text-align: center;
+        margin-bottom: 60px;
+        &:after {
+            content:none;
+        }
+    }
+    h4 {
+        font-size: 3.1rem;
+        color: $bodyColor;
+    }
+    p {
+        padding-top: 20px;
+    }
+    figure {
+        max-height: 470px;
+        margin-top: 50px;
+    }
+}
+
+.selectProject {
+    background-image: url(./assets/IMG_1265_.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+}
+
+.projectDescription {
+    display: flex;
+    justify-content: space-between;
+}
+
+.projectDescription figure, .eachProjectDetails {
+    width: calc(50% - 30px);
+}
+
+.eachProjectDetails {
+    color: $bodyColor;
+}
+
+.eachProjectDetails .programsUsed p {
+    padding: 8px 10px;
+    background-color: $backgroundDarkTransparentDarker;
+    color: $headerColor;
+    margin-bottom: 20px;
+}
+
+.eachProjectDetails .linksToProjects a {
+    color: $accentColor;
+    font-weight: 700;
+    font-size: 2rem;
+    &:hover, &:focus {
+        color: $headerColor;
+        border: 1px solid $accentColor;
+    }
+}
+
+.selectProject .linksToProjects p {
+    padding-top: 8px;
+}
+
+.linksToProjects {
+    margin-top: 20px;
+}
+
+.linksToProjects a:hover, .linksToProjects a:focus {
+    color: $headerColor;
+}
+
+.changeFlexDirection {
+    flex-direction: row-reverse;
+    .eachProjectDetails {
+        margin-top: 50px;
+    }
+}
+
+.projectsMain .eventImage {
+    margin-top: 100px;
+}
+
+.footerContact {
+    background-image: url(./assets/IMG_89700small.jpg);
+    // height: 100vh;
+}
+
+.projectsFooter {
+    padding-bottom: 220px;
+}

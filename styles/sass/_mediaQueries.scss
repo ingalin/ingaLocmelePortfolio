@@ -367,7 +367,7 @@
     }
 
     .readMore {
-        max-width: 70%;
+        max-width: 80%;
     }
 
     // Section 1
@@ -489,6 +489,10 @@
         font-size: 2rem;
     }
 
+    .readMore {
+        max-width: 100%;
+    }
+
     .headings {
         margin-left: 18px;
     }
@@ -570,6 +574,16 @@
     header {
         height: 80vh;
         min-height: 400px;
+    }
+
+    .readMore {
+        .linkToAbout {
+            width: 88%;
+        }
+        .scroll {
+            margin-top: 15px;
+            width: 12%;
+        }
     }
 
     h2 {

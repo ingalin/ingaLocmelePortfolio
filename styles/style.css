@@ -1773,7 +1773,7 @@ input:hover, input:focus, textarea:hover, textarea:focus {
     font-weight: 2.8rem;
   }
   .readMore {
-    max-width: 70%;
+    max-width: 80%;
   }
   .aboutSectionImgText {
     -webkit-box-align: center;
@@ -1882,6 +1882,9 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   h1 {
     font-size: 2rem;
   }
+  .readMore {
+    max-width: 100%;
+  }
   .headings {
     margin-left: 18px;
   }
@@ -1941,6 +1944,13 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   header {
     height: 80vh;
     min-height: 400px;
+  }
+  .readMore .linkToAbout {
+    width: 88%;
+  }
+  .readMore .scroll {
+    margin-top: 15px;
+    width: 12%;
   }
   h2 {
     font-size: 4rem;

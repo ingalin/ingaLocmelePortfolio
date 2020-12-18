@@ -138,3 +138,53 @@ hr {
 .filter{
     filter: invert(47%) sepia(87%) saturate(4487%) hue-rotate(4deg) brightness(94%) contrast(94%);
 }
+
+// Animations
+
+@keyframes animateh1 {
+    0%   {left:150px;}
+    100% {left:0px;}
+}
+
+@keyframes animateh3 {
+    0%   {left:100px;}
+    100% {left:0px;}
+}
+
+@keyframes animateSkills {
+    10%, 90% {transform: translate3d(-1px, 0, 0);}
+    20%, 80% {transform: translate3d(2px, 0, 0);}
+    30%, 50%, 70% {transform: translate3d(-4px, 0, 0);}
+    40%, 60% {transform: translate3d(4px, 0, 0);}
+}
+
+h1 {
+    position: relative;
+    animation-name: animateh1;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+.moreInfoHover h3 {
+    position: relative;
+    animation-name: animateh3;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+}
+
+.programsUsed {
+    position: relative;
+    animation-name: animateh3;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+}
+
+.eachSkill figure:hover {
+    animation: animateSkills 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+}
+
+
+

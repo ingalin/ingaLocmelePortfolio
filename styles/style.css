@@ -1680,6 +1680,9 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   .projectsMain .eventImage, .projectDescription figure {
     margin: 0;
   }
+  .readMore {
+    max-width: 60%;
+  }
   .aboutSectionImgText {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1768,6 +1771,9 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   }
   h1 {
     font-weight: 2.8rem;
+  }
+  .readMore {
+    max-width: 70%;
   }
   .aboutSectionImgText {
     -webkit-box-align: center;

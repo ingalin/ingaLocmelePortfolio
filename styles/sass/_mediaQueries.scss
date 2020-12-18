@@ -259,6 +259,11 @@
         margin: 0;
     }
 
+    // Header read more
+    .readMore {
+        max-width: 60%;
+    }
+
     // Section 1
 
     .aboutSectionImgText {
@@ -359,6 +364,10 @@
 
     h1 {
         font-weight: 2.8rem;
+    }
+
+    .readMore {
+        max-width: 70%;
     }
 
     // Section 1

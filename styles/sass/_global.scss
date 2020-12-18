@@ -138,6 +138,10 @@ hr {
     filter: invert(47%) sepia(87%) saturate(4487%) hue-rotate(4deg) brightness(94%) contrast(94%);
 }
 
+.filterWhite {
+    filter: brightness(0) invert(1);
+}
+
 // Animations
 
 @keyframes animateh1 {
@@ -178,12 +182,19 @@ h1 {
     animation-timing-function: ease-out;
 }
 
-.eachSkill figure:hover {
+.eachSkill figure:hover, .filterWhite:hover  {
     animation: animateSkills 0.82s cubic-bezier(.36,.07,.19,.97) both;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
     perspective: 1000px;
 }
 
+// .filterWhite:hover  {
+//     animation: animateSkills 0.82s cubic-bezier(.36,.07,.19,.97) both;
+//     transform: translate3d(0, 0, 0);
+//     backface-visibility: hidden;
+//     perspective: 1000px;
+    
+// }
 
 

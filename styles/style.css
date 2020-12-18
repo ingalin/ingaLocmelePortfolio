@@ -344,6 +344,11 @@ hr {
           filter: invert(47%) sepia(87%) saturate(4487%) hue-rotate(4deg) brightness(94%) contrast(94%);
 }
 
+.filterWhite {
+  -webkit-filter: brightness(0) invert(1);
+          filter: brightness(0) invert(1);
+}
+
 @-webkit-keyframes animateh1 {
   0% {
     left: 150px;
@@ -448,7 +453,7 @@ h1 {
           animation-timing-function: ease-out;
 }
 
-.eachSkill figure:hover {
+.eachSkill figure:hover, .filterWhite:hover {
   -webkit-animation: animateSkills 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
           animation: animateSkills 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   -webkit-transform: translate3d(0, 0, 0);
@@ -536,6 +541,24 @@ h1 {
 .readMore {
   min-height: 30px;
   margin: 15px 0 30px -30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  max-width: 50%;
+}
+
+.readMore a {
+  display: block;
+  width: 80%;
+}
+
+.readMore figure {
+  margin-top: 5px;
+  width: 20%;
 }
 
 .readMore a {

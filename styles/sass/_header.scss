@@ -47,6 +47,17 @@
 .readMore {
     min-height: 30px;
     margin: 15px 0 30px -30px;
+    display: flex;
+    flex-direction: row;
+    max-width: 50%;
+    a {
+        display: block;
+        width: 80%;
+    }
+    figure {
+        margin-top: 5px;
+        width: 20%;
+    }
 }
 
 .readMore a {

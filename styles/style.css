@@ -1749,12 +1749,15 @@ input:hover, input:focus, textarea:hover, textarea:focus {
     height: 380px;
     padding: 30px 0 0;
   }
+  .carousel-cell figure {
+    padding-left: 25px;
+  }
   .section3Background {
     min-height: 700px;
     height: 80vh;
   }
   .moreInfoHover {
-    width: 100%;
+    width: 90%;
     padding: 10px;
   }
   .moreInfoHover .programsUsed p {
@@ -1767,6 +1770,9 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   .flickity-prev-next-button.next {
     right: 5px;
     top: 350px;
+  }
+  .flickity-page-dots {
+    bottom: 85px;
   }
   footer h3 {
     margin: 0;
@@ -1821,6 +1827,9 @@ input:hover, input:focus, textarea:hover, textarea:focus {
     margin: -30px 0 0;
     max-height: 150px;
     width: 80%;
+  }
+  .carousel-cell figure {
+    padding-left: 12px;
   }
   .contact .contactInfo {
     min-width: 310px;

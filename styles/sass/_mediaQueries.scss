@@ -517,6 +517,9 @@
     .carousel-cell {
         height: 380px;
         padding: 30px 0 0;
+        figure {
+            padding-left: 25px;
+        }
     }
 
     .section3Background {
@@ -525,7 +528,7 @@
     }
 
     .moreInfoHover {
-        width: 100%;
+        width: 90%;
         padding: 10px;
         .programsUsed p{
             margin: 2px;
@@ -540,6 +543,10 @@
     .flickity-prev-next-button.next {
         right: 5px;
         top: 350px;
+    }
+
+    .flickity-page-dots {
+        bottom: 85px;
     }
 
     // Footer
@@ -609,6 +616,12 @@
             max-height: 150px;
             width: 80%;
         }
+    }
+
+    // Section3
+    
+    .carousel-cell figure {
+            padding-left: 12px;
     }
 
     // Contact

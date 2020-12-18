@@ -50,13 +50,24 @@
     display: flex;
     flex-direction: row;
     max-width: 50%;
-    a {
+    .linkToAbout {
         display: block;
         width: 80%;
     }
-    figure {
+    .scroll {
         margin-top: 5px;
         width: 20%;
+        padding: 0;
+        &:focus, &:hover {
+            background-color: transparent;
+            border: transparent solid 2px;
+        }
+        &:after {
+            content: none;
+        }
+    }
+    figure {
+        width: 100%;
     }
 }
 

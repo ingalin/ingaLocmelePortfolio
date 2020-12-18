@@ -453,7 +453,7 @@ h1 {
           animation-timing-function: ease-out;
 }
 
-.eachSkill figure:hover, .filterWhite:hover {
+.eachSkill figure:hover, .filterWhite:hover, .eachSkill figure:focus, .filterWhite:focus {
   -webkit-animation: animateSkills 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
           animation: animateSkills 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
   -webkit-transform: translate3d(0, 0, 0);
@@ -551,14 +551,28 @@ h1 {
   max-width: 50%;
 }
 
-.readMore a {
+.readMore .linkToAbout {
   display: block;
   width: 80%;
 }
 
-.readMore figure {
+.readMore .scroll {
   margin-top: 5px;
   width: 20%;
+  padding: 0;
+}
+
+.readMore .scroll:focus, .readMore .scroll:hover {
+  background-color: transparent;
+  border: transparent solid 2px;
+}
+
+.readMore .scroll:after {
+  content: none;
+}
+
+.readMore figure {
+  width: 100%;
 }
 
 .readMore a {

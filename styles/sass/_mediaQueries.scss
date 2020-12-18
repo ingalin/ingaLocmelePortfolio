@@ -27,6 +27,7 @@
     }
 
     // Section 2
+   
     .section2 .box {
         width: 25%;
     }
@@ -79,7 +80,540 @@
     }
 
     // Contact
+    footer {
+        padding-bottom: 180px;
+    }
+
     form {
         padding: 30px 20px;
+    }
+
+    .contact {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .contactInfo {
+        margin: 15px 20px;
+        width: 300px;
+    }
+
+    // Projects page
+    .projectDescription figure, .eachProjectDetails {
+        width: 50%;
+    }
+
+    .projectsMain .programsUsed {
+        margin-top: 15px;
+        p {
+            margin-top: 5px;
+        }
+    }
+
+    .projectsMain {
+        h4 {
+            font-size: 3rem;
+            color: $bodyColor;
+        }
+        p {
+            padding-top: 10px;
+        }
+        figure {
+            max-height: 470px;
+            margin-top: 80px;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    // Header Text
+    hr {
+        margin-top: -24rem;
+        width: 110px;
+    }
+}
+
+@media (max-width: 900px) {
+/* Navigation menu header */
+    .headerMenuDrop {
+        .mobileMenu {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            button {
+                text-transform: uppercase;
+                display: block;
+                border: none;
+                background: none;
+                padding: 5px 20px 5px 100px;
+                border: 3px solid transparent;
+                display: flex;
+                align-items: center;
+                i {
+                    font-size: 4rem;
+                }
+                span {
+                    margin-left: 15px;
+                }
+            }
+        }
+
+        .mobileMenu li {
+            position: relative;
+            a {
+                display: inline-block;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                color: $backgroundDarkTransparentDarker2;
+                background-color: $headerColor;
+                text-align: left;
+            }
+        }
+
+        .mobileMenu button:focus-within {
+            i {
+                color: $accentColor;
+            }
+        }
+
+        ul.mobileSubMenu {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            margin: 0;
+            padding: 0;
+        }
+
+        .mobileMenu li:focus-within ul.mobileSubMenu {
+            display: block;
+            z-index: 2;
+        }
+
+        .mobileSubMenu li {
+            display: block;
+            margin: 0;
+        }
+    
+        ul.mobileSubMenu li a {
+            width: 100%;
+            margin: 0;
+        }
+    
+        .mobileSubMenu li:focus-within a, .mobileSubMenu li:hover a {
+            color: $headerColor;
+            background-color: $focusColor;
+            border-color: $accentColor;
+        }
+    
+        .mobileMenu li:focus-within .middleList {
+            display: none;
+        }
+    
+        .mobileMenu li:focus-within li:nth-child(2), .mobileMenu li:focus-within li:nth-child(5)  {
+            border-top: none;
+        }
+    
+        .mobileMenu li:focus-within li:nth-child(2) {
+            border-bottom: none;
+        }
+    }
+
+    // Projects
+
+    .projectsHeaderMenu {
+        color: $backgroundDarkTransparent;
+        i, button span {
+            color: $backgroundDarkTransparentDarker2;
+        }
+        .mobileSubMenu li:focus-within a, .mobileSubMenu li:hover a {
+            color: $headerColor;
+            background-color: $focusColor;
+            border-color: $accentColor;
+        }
+    }
+
+    // Header Projects
+    .projectsHeader {
+        height: 15vh;
+        min-height: 100px;
+    }
+
+    // Projects Description
+    .projectDescription {
+        flex-direction: column;
+        .eachProjectDetails, figure {
+            width: 100%;
+        }
+    }
+
+    .projectDescription figure {
+        display: flex;
+        justify-content: center;
+    }
+
+    .projectsMain .eventImage, .projectDescription figure {
+        margin: 0;
+    }
+
+    // Section 1
+
+    .aboutSectionImgText {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .aboutSection {
+        min-height: 850px;
+        padding-bottom: 70px;
+    }
+
+    .aboutText {
+        width: 100%;
+    }
+
+    .aboutImg {
+        width: 400px;
+        margin-top: -100px;
+    }
+
+    // Section 3
+
+    .portfolio {
+        flex-direction: column;
+        h3 {
+            margin-bottom: 15px;
+        }
+    }
+
+    .readMore {
+        margin-top: 0;
+    }
+
+    .carousel-cell {
+        width: 100%; 
+    }
+
+    .flickity-prev-next-button.previous {
+        left: 10px;
+    }
+
+    .flickity-prev-next-button.next {
+        right: 10px;
+    }
+
+    .moreInfoHover {
+        width: 75%;
+        padding: 25px;
+        h3 {
+            padding: 15px 0 0;
+            font-size: 2.2rem;
+        }
+        .programsUsed p {
+            padding: 3px;
+            font-size: 1.8rem;
+        }
+    }
+
+    // footer 
+    footer {
+        padding-bottom: 150px;
+    }
+
+    // Form
+    .inputFields {
+        flex-direction: column;
+    }
+
+    .requiredFields, input.tel {
+        width: calc(100% - 10px);
+    }
+
+    .contactInfo {
+        margin: 15px 0;
+        width: 100%;
+    }
+
+    // Footer menu
+    .footerMenu .mobileSubMenu {
+        flex-wrap: wrap;
+        background-color: $backgroundDarkTransparentDarker2;
+        a {
+            color: $headerColor;
+        }
+    }
+}
+
+@media (max-width: 715px) {
+    // Header
+    .headerText {
+        width: 85%;
+    }
+
+    h2 {
+        font-size: 5rem;
+    }
+
+    h1 {
+        font-weight: 2.8rem;
+    }
+
+    // Section 1
+    
+    .aboutSectionImgText {
+        align-items: center;
+    }
+
+    .aboutSection {
+        min-height: 1050px;
+        padding-bottom: 70px;
+    }
+
+    .aboutImg {
+        margin-top: 0;
+    }
+
+    // Section 2
+
+    .section2 {
+        flex-direction: column;
+        justify-content: flex-start;
+        height: 730px;
+    }
+
+    .skills {
+        width: 90%;
+        margin-right: 5%;
+        padding-bottom: 0;
+        h3 {
+            margin-bottom: 20px;
+        }
+    }
+
+    .skillSets {
+        width: 100%;
+    }
+
+    .section2 .box {
+        width: 100%;
+        max-height: 300px;
+        display: flex;
+        justify-content: flex-end;
+        margin-left: 25%;
+        figure {
+            margin: -40px 0 0;
+            max-height: 200px;
+            width: 90%;
+        }
+    }
+
+    .section2 .box1 {
+    border-width: 20px 0 0 20px; 
+    }
+
+    // Section 3
+
+    .portfolio h3::after {
+        bottom: 2.1rem;
+    }
+
+    .moreInfoHover {
+        padding: 20px;
+        p {
+            font-size: 1.6rem;
+        }
+        .programsUsed p{
+            margin: 5px;
+            font-size: 1.6rem;
+        }
+    }
+
+    .section3Background {
+        min-height: 750px;
+    }
+
+    .linksToProjects {
+        flex-direction: column;
+        margin-top: 5px;
+    }
+
+    .linksToProjects p {
+        display: none;
+    }
+
+    .linksToProjects a {
+        margin: 3px 5%;
+        text-align: left;
+        font-size: 1.6rem;
+    }
+
+    .extraInfoHide {
+        display: none;
+    }
+
+    .flickity-prev-next-button.previous {
+        left: 5px;
+    }
+
+    .flickity-prev-next-button.next {
+        right: 5px;
+    }
+
+    .flickity-prev-next-button {
+        width: 50px;
+        height: 50px;
+        border-radius: 5px;
+        padding: 15px 10px;
+    }
+}
+
+@media (max-width: 500px) {
+    // Header
+    .headerText {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .headings {
+        margin-left: 18px;
+    }
+
+    // Section1
+
+    section {
+        overflow: hidden;
+    }
+
+    .aboutSection {
+        min-height: 1200px;
+    }
+
+    // Section2
+
+    .section2 {
+        height: 600px;
+    }
+
+    .skillSets figure {
+        width: 95%;
+    }
+
+    .box {
+        margin-top: 20px;
+    }
+
+    // Section 3
+
+    .projectDesc {
+        display: none;
+    }
+
+    .carousel-cell {
+        height: 380px;
+        padding: 30px 0 0;
+    }
+
+    .section3Background {
+        min-height: 700px;
+        height: 80vh;
+    }
+
+    .moreInfoHover {
+        width: 100%;
+        padding: 10px;
+        .programsUsed p{
+            margin: 2px;
+        }
+    }
+
+    .flickity-prev-next-button.previous {
+        top: 350px;
+        left: 5px;
+    }
+
+    .flickity-prev-next-button.next {
+        right: 5px;
+        top: 350px;
+    }
+
+    // Footer
+
+    footer h3 {
+        margin: 0;
+    }
+}
+
+@media (max-width: 381px) {
+    // Header
+    header {
+        height: 80vh;
+        min-height: 400px;
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    hr {
+        margin-top: -26.7rem;
+    }
+
+    h3 {
+    font-size: 3.4rem;
+        &:after {
+            width: 60px;
+        }
+    }
+
+    // Section1
+
+    .aboutSection {
+        min-height: 1360px;
+    }
+
+    .details {
+        flex-direction: column;
+    }
+    
+    .details2 div {
+        margin: 5px 15px;
+    }
+
+    .details2 {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    // Section 2
+
+    .section2 {
+        height: 400px;
+    }
+
+    .eachSkill {
+        width: calc(25% - 15px);
+    }
+
+    .section2 .box {
+        margin-left: 15%;
+        width: 100%;
+        max-height: 240px;
+        figure {
+            margin: -30px 0 0;
+            max-height: 150px;
+            width: 80%;
+        }
+    }
+
+    // Contact
+    .contact .contactInfo {
+        min-width: 310px;
+        padding: 15px 5px;
     }
 }

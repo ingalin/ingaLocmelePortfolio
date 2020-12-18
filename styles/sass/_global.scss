@@ -94,6 +94,7 @@ h1 {
     font-weight: lighter; 
     letter-spacing: 2px;
     font-weight: 700;
+    line-height: 3.5rem;
 }
 
 h2 {
@@ -127,6 +128,10 @@ hr {
     display: block;
     width: 100px;
     margin-top: -19.5rem;
+}
+
+.section2, .section3 {
+    overflow: hidden;
 }
 
 // Fill the color of icons

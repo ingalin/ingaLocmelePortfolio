@@ -10,7 +10,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     min-height: 680px;
-    height: 100vh;
+    // height: 100vh;
     background-position: center center;
 }
 
@@ -130,13 +130,14 @@
 }
 .flickity-button:hover, .flickity-button:focus {
   background: $focusColor;
-  $headerColor: 1px $headerColor solid;
+  border: 1px $headerColor solid;
+  box-shadow: none;
 }
 
 .flickity-prev-next-button {
   width: 60px;
   height: 60px;
-  border-radius: 5px;
+  border-radius: 1px;
 }
 /* icon color */
 .flickity-button-icon {

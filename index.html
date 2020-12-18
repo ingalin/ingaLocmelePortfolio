@@ -12,14 +12,14 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/checka11y-css" /> -->
 <body>
     <header class="indexHeader" id="home">
-        <nav class="wrapper">
+        <nav class="wrapper headerMenuDrop">
             <!-- Mobile menu -->
             <ul class="mobileMenu">
                 <li>
                     <!-- Button for mobile menu only -->
                     <button>
                         <i class="fas fa-bars" aria-hidden="true"></i>
-                        <span class="srOnly">Menu</span>
+                        <span>menu</span>
                     </button>
                     <!-- Desktop menu -->
                     <ul class="mobileSubMenu">
@@ -191,17 +191,17 @@
                         <a href="projects.html">View All Projects</a>
                     </div>
                 </div>
-                <p class="srOnly">Please use arrows or Previous, Next buttons to navigate through the carousel.</p>
+                <p class="srOnly">Please use Previous, Next buttons to navigate through the carousel. Click on buttons for more information.</p>
                 <p class="instructions">* Click on an image to find out more info about a project or <a href="projects.html">view all projects here.</a></p>
                 <div class="carousel" data-flickity='{ "cellAlign": "center", "contain": true, "freeScroll": true, "wrapAround": true, "autoPlay": true, "autoPlay": 2500}'>
-                    <button class="carousel-cell" aria-live="polite">
+                    <button class="carousel-cell" aria-label="Project Geography Quiz">
                         <figure>
                             <img src="styles/assets/media-774068_1280_g.png" alt="Pictures of Geography Quiz project" />
                         </figure>
-                        <div class="moreInfoHover">
+                        <div class="moreInfoHover" aria-live="polite">
                             <h3>Geography Quiz</h3>
-                            <p>Geography Game for kids in Class 1, 2 & 3, but adults enjoy this game as much as kids. &#128522; </p>
-                            <p>30 randomly selected questions in limited time and bonus points!</p>
+                            <p class="projectDesc">Geography Game for kids in Class 1, 2 & 3, but adults enjoy this game as much as kids. &#128522; </p>
+                            <p class="extraInfoHide">30 randomly selected questions in limited time and bonus points!</p>
                             <div class="linksToProjects">
                                 <a href="projects.html#geography">Read More</a>
                                 <p>||</p>
@@ -218,14 +218,14 @@
                             </div>
                         </div>
                     </button>
-                    <button class="carousel-cell" aria-live="polite">
+                    <button class="carousel-cell" aria-label="Job Search Website">
                         <figure>
                             <img src="styles/assets/media-774068_1280_job.png" alt="Pictures of Job Search project" />
                         </figure>
-                        <div class="moreInfoHover">
+                        <div class="moreInfoHover" aria-live="polite">
                             <h3>Job Search Site</h3>
-                            <p>Find your job in Toronto.</p>
-                            <p>Search by location or keywords, view details and apply for the job!</p>
+                            <p class="projectDesc">Find your job in Toronto.</p>
+                            <p class="projectDesc">Search by location or keywords, view details and apply for the job!</p>
                             <div class="linksToProjects">
                                 <a href="projects.html#job">Read More</a>
                                 <p>||</p>
@@ -241,15 +241,15 @@
                             </div>
                         </div>
                     </button>
-                    <button class="carousel-cell" aria-live="polite">
+                    <button class="carousel-cell" aria-label="Sophie's blog website">
                         <figure>
                             <img src="styles/assets/media-774068_1280_job-sophie.png" alt="Pictures of Sophie's Blog project" />
                         </figure>
-                        <div class="moreInfoHover">
+                        <div class="moreInfoHover" aria-live="polite">
                             <h3>Sophie's Blog</h3>
-                            <p>Modern blog website for Sophie.</p>
-                            <p>It's pixel perfect across all size devices.</p>
-                            <p>Come and check it out!</p>
+                            <p class="projectDesc">Modern blog website for Sophie.</p>
+                            <p class="projectDesc">It's pixel perfect across all size devices.</p>
+                            <p class="projectDesc">Come and check it out!</p>
                             <div class="linksToProjects">
                                 <a href="projects.html#sophie">Read More</a>
                                 <p>||</p>
@@ -263,14 +263,14 @@
                             </div>
                         </div>
                     </button>
-                    <button class="carousel-cell" aria-live="polite">
+                    <button class="carousel-cell" aria-label="Event planner project">
                         <figure>
                             <img src="styles/assets/media-774068_1280_evente.png" alt="Pictures of Event Planner project" />
                         </figure>
-                        <div class="moreInfoHover">
+                        <div class="moreInfoHover" aria-live="polite">
                             <h3>Event Planner</h3>
-                            <p>Are you in a lockdown? Try this "replace your event" app!</p>
-                            <p>It's a team project created using REACT and FIREBASE.</p>
+                            <p class="projectDesc">Are you in a lockdown? Try this "replace your event" app!</p>
+                            <p class="projectDesc">It's a team project created using REACT and FIREBASE.</p>
                             <div class="linksToProjects">
                                 <a href="projects.html#eventPlanner">Read More</a>
                                 <p>||</p>
@@ -309,7 +309,7 @@
                             <input type="email" id="email" name="email" placeholder="Your E-mail" required>
                         </div>
                         <label for="tel" class="srOnly">Your Phone Number</label>
-                        <input type="tel" id="tel" name="tel" placeholder="Your Phone Number">
+                        <input type="tel" id="tel" name="tel" class="tel" placeholder="Your Phone Number">
                     </div>
                     <div class="textareaInput">
                         <label for="message"><span class="srOnly">Your Message</span>*</label>
@@ -372,33 +372,22 @@
                     </li>
                 </ul>
             </div>
-            <nav class="wrapper">
-                <!-- Mobile menu -->
-                <ul class="mobileMenu">
+            <nav class="wrapper footerMenu">
+                <ul class="mobileSubMenu">
                     <li>
-                        <!-- Button for mobile menu only -->
-                        <button>
-                            <i class="fas fa-bars" aria-hidden="true"></i>
-                            <span class="srOnly">Menu</span>
-                        </button>
-                        <!-- Desktop menu -->
-                        <ul class="mobileSubMenu">
-                            <li>
-                                <a href="#home"><span class="activeNav">home</span></a>
-                            </li>
-                            <li>
-                                <a href="#about">about</a>
-                            </li>
-                            <li>
-                                <a href="#skills">skills</a>
-                            </li>
-                            <li>
-                                <a href="projects.html">projects</a>
-                            </li>
-                            <li>
-                                <a href="#contact">contact</a>
-                            </li>
-                        </ul>
+                        <a href="#home"><span class="activeNav">home</span></a>
+                    </li>
+                    <li>
+                        <a href="#about">about</a>
+                    </li>
+                    <li>
+                        <a href="#skills">skills</a>
+                    </li>
+                    <li>
+                        <a href="projects.html">projects</a>
+                    </li>
+                    <li>
+                        <a href="#contact">contact</a>
                     </li>
                 </ul>
             </nav>

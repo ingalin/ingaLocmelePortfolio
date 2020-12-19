@@ -865,7 +865,8 @@
   $(".carousel-cell").on('click', function () {
     if (classTrue == true) {
 
-      $(".is-selected").prop('disabled', true).find(".moreInfoHover").removeClass("show").addClass("noHover");
+      $(".is-selected").find(".moreInfoHover").removeClass("show").addClass("noHover");
+      $(".moreInfoHover").removeClass("show");
       $(".dot").attr('tabindex', -1);
       $(".flickity-page-dots").attr('tabindex', -1);
       classTrue = false;

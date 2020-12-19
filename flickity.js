@@ -851,6 +851,7 @@
     this.element.classList.add('is-selected');
     this.element.removeAttribute('aria-hidden');
         // Added to add focus on selected item //Inga
+    checkPosition();
     $(".is-selected").attr('tabindex', 0).removeClass("noFocus");
     $(".is-selected").find("button").prop('disabled', false).attr('tabindex', 0);
    

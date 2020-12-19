@@ -1941,8 +1941,8 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   .flickity-page-dots {
     bottom: 85px;
   }
-  .is-selected {
-    pointer-events: none;
+  .is-selected:hover .moreInfoHover {
+    display: none;
   }
   footer h3 {
     margin: 0;

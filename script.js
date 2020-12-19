@@ -10,7 +10,6 @@ app.init = function () {
     $(".carousel-cell").on('focusin', function () {
         $carousel.flickity('stopPlayer');
     });
-
 };
 
 //Document Ready

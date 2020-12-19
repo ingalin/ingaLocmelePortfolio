@@ -894,7 +894,7 @@
     classTrue = false;
   };
 
-  $(".is-selected").on('click', ".moreInfoHover", function () {
+  $("main").on('click', ".moreInfoHover", function () {
     $(".moreInfoHover").removeClass("show");
   })
 

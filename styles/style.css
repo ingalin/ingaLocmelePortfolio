@@ -865,7 +865,7 @@ nav ul li a {
 .instructions a:hover, .instructions a:focus {
   background-color: transparent;
   border: 1px transparent solid;
-  color: #e45507;
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .carousel {

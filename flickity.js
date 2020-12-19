@@ -866,7 +866,7 @@
     if (classTrue == true) {
 
       $(".is-selected").find(".moreInfoHover").removeClass("show").addClass("noHover");
-      $(".moreInfoHover").removeClass("show");
+      // $(".moreInfoHover").removeClass("show");
       $(".dot").attr('tabindex', -1);
       $(".flickity-page-dots").attr('tabindex', -1);
       classTrue = false;

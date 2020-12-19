@@ -850,19 +850,19 @@
   proto.select = function () {
     this.element.classList.add('is-selected');
     this.element.removeAttribute('aria-hidden');
-        // Added to add focus on selected item //Inga
+    // Added to add focus on selected item //Inga
     checkPosition();
     $(".is-selected").attr('tabindex', 0).removeClass("noFocus");
     $(".is-selected").find("button").prop('disabled', false).attr('tabindex', 0);
-   
     $(".is-selected").prop('disabled', false).removeClass("noHover").removeClass("noFocus");
+    // Remove dots from tabbing for better user experience//Inga
     $(".dot").attr('tabindex', -1);
     $(".flickity-page-dots").attr('tabindex', -1);
   };
 
 
-  checkPosition();
-
+ 
+// if screen smaller than 767px, remove hover effect (for phones) //Inga
   function checkPosition() {
     if (window.matchMedia('(max-width: 767px)').matches) {
       $(".is-selected").removeClass("hovering");
@@ -872,26 +872,26 @@
     }
   }
 
+  checkPosition();
+
 
   // Added to change tabindex on cick // Inga
   let classTrue = false;
   $(".carousel-cell").on('click', function () {
     if (classTrue == true) {
-
+      // hide additional info
       $(".is-selected").find(".moreInfoHover").removeClass("show").addClass("noHover");
+      // hide dots from tabbing for better user experience//Inga
       $(".dot").attr('tabindex', -1);
       $(".flickity-page-dots").attr('tabindex', -1);
       classTrue = false;
     }
     else {
+      // show additional info //Inga
       $(".is-selected").find("button").prop('disabled', false).attr('tabindex', 0).removeClass("noFocus");
       $(".is-selected").attr('tabindex', 0).find(".moreInfoHover").addClass("show");
-
-
-
-
-      
       $(".is-selected").prop('disabled', false).removeClass("noHover").removeClass("noFocus");
+      // hide dots from tabbing for better user experience//Inga
       $(".dot").attr('tabindex', -1);
       $(".flickity-page-dots").attr('tabindex', -1);
       classTrue = true;
@@ -910,14 +910,6 @@
     $(".flickity-page-dots").attr('tabindex', -1);
     classTrue = false;
   };
-
-  // $("main").on('click', ".moreInfoHover", function () {
-  //   $(".moreInfoHover").removeClass("show");
-  // });
-
-  // $(".carousel-cell").on('focusin', function () {
-  //   $carousel.flickity('stopPlayer');
-  // });
 
 
 

@@ -335,7 +335,7 @@ hr {
   margin-top: -19.5rem;
 }
 
-.section2, .section3 {
+.section2, .section3Background {
   overflow: hidden;
 }
 
@@ -367,18 +367,18 @@ hr {
   }
 }
 
-@-webkit-keyframes animateh3 {
+@-webkit-keyframes programs {
   0% {
-    left: 100px;
+    left: 30px;
   }
   100% {
     left: 0px;
   }
 }
 
-@keyframes animateh3 {
+@keyframes programs {
   0% {
-    left: 100px;
+    left: 30px;
   }
   100% {
     left: 0px;
@@ -433,20 +433,10 @@ h1 {
           animation-timing-function: ease-out;
 }
 
-.moreInfoHover h3 {
+.programsUsed, .moreInfoHover h3 {
   position: relative;
-  -webkit-animation-name: animateh3;
-          animation-name: animateh3;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-timing-function: ease-out;
-          animation-timing-function: ease-out;
-}
-
-.programsUsed {
-  position: relative;
-  -webkit-animation-name: animateh3;
-          animation-name: animateh3;
+  -webkit-animation-name: programs;
+          animation-name: programs;
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s;
   -webkit-animation-timing-function: ease-out;
@@ -844,6 +834,9 @@ nav ul li a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 50px 0 0 0;
 }
 
@@ -853,12 +846,13 @@ nav ul li a {
 
 .portfolio h3:after {
   background: #e45507;
-  bottom: 3.2rem;
+  bottom: 2rem;
 }
 
 .instructions {
   color: #ffffff;
   font-size: 1.6rem;
+  padding-bottom: 10px;
 }
 
 .instructions a {
@@ -868,8 +862,10 @@ nav ul li a {
   color: #ffffff;
 }
 
-.instructions {
-  padding-bottom: 10px;
+.instructions a:hover, .instructions a:focus {
+  background-color: transparent;
+  border: 1px transparent solid;
+  color: #e45507;
 }
 
 .carousel {
@@ -1708,12 +1704,22 @@ input:hover, input:focus, textarea:hover, textarea:focus {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
   .portfolio h3 {
     margin-bottom: 15px;
   }
   .readMore {
     margin-top: 0;
+    margin-left: 0px;
+  }
+  .readMore a {
+    padding: 15px 5px;
+  }
+  .readMore a::after {
+    left: -12%;
   }
   .carousel-cell {
     width: 100%;
@@ -1946,11 +1952,16 @@ input:hover, input:focus, textarea:hover, textarea:focus {
     min-height: 400px;
   }
   .readMore .linkToAbout {
-    width: 88%;
+    width: 80%;
+    padding-right: 5px;
+    padding-top: 15px;
   }
   .readMore .scroll {
     margin-top: 15px;
-    width: 12%;
+    width: 20%;
+  }
+  .readMore a::after {
+    bottom: 1rem;
   }
   h2 {
     font-size: 4rem;
@@ -1998,6 +2009,12 @@ input:hover, input:focus, textarea:hover, textarea:focus {
   }
   .carousel-cell figure {
     padding-left: 12px;
+  }
+  .section3Background {
+    min-height: 750px;
+  }
+  .portfolio h3::after {
+    bottom: 1.9rem;
   }
   .contact .contactInfo {
     min-width: 310px;

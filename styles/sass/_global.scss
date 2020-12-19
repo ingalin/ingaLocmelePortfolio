@@ -129,7 +129,7 @@ hr {
     margin-top: -19.5rem;
 }
 
-.section2, .section3 {
+.section2, .section3Background {
     overflow: hidden;
 }
 
@@ -149,8 +149,8 @@ hr {
     100% {left:0px;}
 }
 
-@keyframes animateh3 {
-    0%   {left:100px;}
+@keyframes programs {
+    0%   {left:30px;}
     100% {left:0px;}
 }
 
@@ -168,16 +168,9 @@ h1 {
     animation-timing-function: ease-out;
 }
 
-.moreInfoHover h3 {
+.programsUsed, .moreInfoHover h3 {
     position: relative;
-    animation-name: animateh3;
-    animation-duration: 0.5s;
-    animation-timing-function: ease-out;
-}
-
-.programsUsed {
-    position: relative;
-    animation-name: animateh3;
+    animation-name: programs;
     animation-duration: 0.5s;
     animation-timing-function: ease-out;
 }

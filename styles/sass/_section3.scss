@@ -14,29 +14,35 @@
 .portfolio {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 50px 0 0 0;
     h3 {
       color: $headerColor;
       &:after {
         background: $accentColor;
-        bottom: 3.2rem;
+        bottom: 2rem;
       }
     }
 }
+
+
 
 // Flickity Carousel // Adjusted Code from flickity.com
 
 .instructions {
   color: $headerColor;
   font-size: 1.6rem;
+  padding-bottom: 10px;
 }
 .instructions a {
     padding: 8px 2px;
     @include secondaryFont(1.6rem);
   }
 
-.instructions {
-  padding-bottom: 10px;
+.instructions a:hover, .instructions a:focus {
+  background-color: transparent;
+  border: 1px transparent solid;
+  color: $accentColor;
 }
 
 .carousel {

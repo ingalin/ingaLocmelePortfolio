@@ -128,9 +128,16 @@
   }
 }
 
-.is-selected:hover .moreInfoHover {
+// .is-selected:hover .moreInfoHover {
+//   display: block;
+// }
+
+.hovering:hover .moreInfoHover{
   display: block;
 }
+
+
+///////////////
 
 .is-selected {
   border: 2px solid transparent;

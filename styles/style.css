@@ -973,7 +973,7 @@ nav ul li a {
   background-color: rgba(53, 53, 53, 0.3);
 }
 
-.is-selected:hover .moreInfoHover {
+.hovering:hover .moreInfoHover {
   display: block;
 }
 

@@ -860,18 +860,6 @@
   };
 
 
-  checkPosition();
-
-  function checkPosition() {
-    if (window.matchMedia('(max-width: 767px)').matches) {
-      $(".is-selected").removeClass("hovering");
-    }
-    else {
-      $(".is-selected").addClass("hovering");
-    }
-  }
-
-
   // Added to change tabindex on cick // Inga
   let classTrue = false;
   $(".carousel-cell").on('click', function () {
@@ -885,10 +873,6 @@
     else {
       $(".is-selected").find("button").prop('disabled', false).attr('tabindex', 0).removeClass("noFocus");
       $(".is-selected").attr('tabindex', 0).find(".moreInfoHover").addClass("show");
-
-
-
-
       
       $(".is-selected").prop('disabled', false).removeClass("noHover").removeClass("noFocus");
       $(".dot").attr('tabindex', -1);

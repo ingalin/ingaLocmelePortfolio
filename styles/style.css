@@ -1863,7 +1863,7 @@ input:hover, input:focus, textarea:hover, textarea:focus {
     margin: 3px 5%;
     text-align: left;
     font-size: 1.6rem;
-    max-width: 100px;
+    max-width: 130px;
   }
   .extraInfoHide {
     display: none;

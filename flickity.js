@@ -911,9 +911,13 @@
     classTrue = false;
   };
 
-  $("main").on('click', ".moreInfoHover", function () {
-    $(".moreInfoHover").removeClass("show");
-  })
+  // $("main").on('click', ".moreInfoHover", function () {
+  //   $(".moreInfoHover").removeClass("show");
+  // });
+
+  // $(".carousel-cell").on('focusin', function () {
+  //   $carousel.flickity('stopPlayer');
+  // });
 
 
 

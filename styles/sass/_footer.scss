@@ -42,10 +42,12 @@ footer {
 
 .copyright {
     background-color: $backgroundDarkTransparentDarker;
-    text-align: center;
     p {
         color: $headerColorTransparent2;
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+        margin: 0;
+        width: 205px;
+        text-align: center;
     }
     .copyrightBorder {
         max-width: 1500px;
@@ -54,7 +56,10 @@ footer {
         border-width: 2px 0  0; 
         border-style: solid;
         border-color: $accentColor;
-        padding: 15px 0;
+        padding: 5px 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 }
 

@@ -1120,12 +1120,14 @@ footer {
 
 .copyright {
   background-color: rgba(53, 53, 53, 0.7);
-  text-align: center;
 }
 
 .copyright p {
   color: rgba(255, 255, 255, 0.8);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
+  margin: 0;
+  width: 205px;
+  text-align: center;
 }
 
 .copyright .copyrightBorder {
@@ -1135,7 +1137,15 @@ footer {
   border-width: 2px 0  0;
   border-style: solid;
   border-color: #e45507;
-  padding: 15px 0;
+  padding: 5px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .projectsHeader a, .footerBackground a {

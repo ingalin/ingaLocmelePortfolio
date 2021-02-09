@@ -144,11 +144,6 @@ hr {
 
 // Animations
 
-@keyframes animateh1 {
-    0%   {left:150px;}
-    100% {left:0px;}
-}
-
 @keyframes programs {
     0%   {left:30px;}
     100% {left:0px;}
@@ -159,13 +154,6 @@ hr {
     20%, 80% {transform: translate3d(2px, 0, 0);}
     30%, 50%, 70% {transform: translate3d(-4px, 0, 0);}
     40%, 60% {transform: translate3d(4px, 0, 0);}
-}
-
-h1 {
-    position: relative;
-    animation-name: animateh1;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
 }
 
 .programsUsed, .moreInfoHover h3 {

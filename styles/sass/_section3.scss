@@ -324,6 +324,7 @@
       color: $accentColor;
       font-weight: 700;
       transition: none;
+      will-change: transform;
 
       @include mediaQ(360px) {
         margin-bottom: 1rem;

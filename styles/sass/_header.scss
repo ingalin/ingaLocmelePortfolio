@@ -43,7 +43,7 @@ header {
 .headerText {
     display: flex;
     position: relative;
-    left: -230rem;
+    left: -1000rem;
     z-index: 3;
 
     @include mediaQ($xSm) {

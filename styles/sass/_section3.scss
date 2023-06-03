@@ -148,6 +148,7 @@
     padding-top: 0;
     margin-top: 1rem;
     cursor: url("./assets/icons/cursor.cur"), default;
+    will-change: transform;
 
     .link-text {
       font-size: 1.4rem;
@@ -245,6 +246,7 @@
       display: flex;
       flex-direction: column;
       max-width: 80rem;
+      will-change: transform;
 
       @include minMediaQ($xSm) {
         opacity: 0;
@@ -320,6 +322,7 @@
       margin-bottom: 2rem;
       color: $accentColor;
       font-weight: 700;
+      transition: none;
 
       @include mediaQ(360px) {
         margin-bottom: 1rem;

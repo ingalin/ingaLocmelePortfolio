@@ -43,17 +43,7 @@ header {
 .headerText {
     display: flex;
     position: relative;
-    left: -1000rem;
     z-index: 3;
-
-    @include mediaQ($xSm) {
-        left: -70rem;
-    }
-
-    &.slideIn {
-        left: 0;
-        transition: left 1.8s ease;
-    }
 
     h1 {
         margin: 2.2rem 0 3.2rem;

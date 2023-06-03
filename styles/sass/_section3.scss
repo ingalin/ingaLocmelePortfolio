@@ -247,6 +247,7 @@
       flex-direction: column;
       max-width: 80rem;
       will-change: transform;
+      transform: translateY(0);
 
       @include minMediaQ($xSm) {
         opacity: 0;

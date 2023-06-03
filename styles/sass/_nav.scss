@@ -125,7 +125,8 @@ nav ul {
             padding: 0;
         }
 
-        .mobileMenu li:focus-within ul.mobileSubMenu {
+        .mobileMenu li:focus-within ul.mobileSubMenu,
+        .mobileMenu li:focus-visible ul.mobileSubMenu {
             display: block;
             z-index: 100;
         }

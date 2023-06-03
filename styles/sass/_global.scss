@@ -22,7 +22,10 @@ $xSm: 500px;
 * {
     padding: 0;
     margin: 0;
+}
 
+*:focus {
+    outline: 0.2rem solid $accentColor;
 }
 
 html {
@@ -64,6 +67,7 @@ button {
     text-decoration: none;
     padding: 1.5rem 3rem;
     border: .1rem transparent solid;
+
     @include hover {
         background: $focusColor;
         border: .1rem $text solid;
@@ -153,6 +157,7 @@ footer {
         letter-spacing: .2rem;
         margin-bottom: 2rem;
         position: relative;
+
         &:after {
             content: '';
             width: 12rem;

@@ -1,26 +1,13 @@
 // Form Send Message
 
 form {
-    background-color: $headerColorTransparent;
-    padding: 40px 100px;
+    padding: 0 0 4rem;
+    max-width: 100rem;
+    margin: 0 auto;
 }
 
 footer h3 {
     text-align: center;
-    padding-top: 20px;
-    background-color: $headerColor;
-    margin: 40px 0 0;
-    &:after {
-        content: none;
-    }
-}
-
-footer .contacHeadding {
-    text-align: center;
-    color: $accentColor;
-    padding-top: 20px;
-    background-color: $headerColor;
-    text-transform: uppercase;
 }
 
 .inputFields {
@@ -29,23 +16,40 @@ footer .contacHeadding {
     flex-wrap: wrap;
 }
 
-input, textarea {
-    padding: 20px 20px 10px 5px;
-    border-width: 0 0 2px 0; 
-    border-style: solid;
-    border-color: $backgroundDarkTransparent;
+input,
+textarea {
+    padding: 2rem 2rem 2rem 1rem;
+    background: transparent;
+    color: $text;
+    border: 0;
+    position: relative;
+    background-image: linear-gradient(#a7a7a7, #a7a7a7);
+    background-size: 100% 0.2rem;
+    background-position: bottom center;
+    background-repeat: no-repeat;
+
+    &:hover,
+    &:focus {
+        background-image: linear-gradient($accentColor, $accentColor);
+    }
+
+    &:focus {
+        outline: .1rem solid #a7a7a7;
+    }
+
 }
 
 textarea {
-    height: 200px;
+    height: 20rem;
     resize: none;
-    width: calc(100% - 10px);
+    width: calc(100% - 1rem);
 }
 
 label {
-    padding-top: 20px;
+    padding-top: 2rem;
     color: $accentColor;
     display: block;
+    margin-right: 0.5rem;
 }
 
 .textareaInput {
@@ -55,20 +59,28 @@ label {
 
 .requiredFields {
     display: flex;
+
     input {
-        width: calc(100% - 10px);
+        width: calc(100% - 1rem);
     }
 }
 
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
     @include mainFont(1.6rem);
-    color: $backgroundDarkTransparentDarker;
-    font-weight: 700;
+    color: $text;
+    font-weight: 600;
 }
 
-.requiredFields, input[type="tel"] {
-    margin-bottom: 20px;
-    width: calc(100%/3 - 30px);
+.requiredFields,
+input[type="tel"] {
+    margin-bottom: 2rem;
+    width: calc(100%/3 - 3rem);
+
+    @include mediaQ($sm) {
+        width: 100%;
+        margin-bottom: 3rem;
+    }
 }
 
 .submitButton {
@@ -77,27 +89,29 @@ input::placeholder, textarea::placeholder {
 }
 
 .submit {
-    width: 250px;
-    margin-top: 25px;
-    margin-bottom: 10px;
-    padding: 18px 30px;
-    background-color: $focusColor;
-    border: 3px solid transparent;
+    margin-top: 8rem;
+    margin-bottom: 1rem;
+    padding: 1.5rem 4.5rem;
+    background-color: $mainColor;
+    border: .3rem solid transparent;
+    text-transform: uppercase;
+    color: $text;
 }
 
-.submit:hover, .submit:focus {
-    border: 3px solid $accentColor;
-    text-decoration: underline;
-    text-decoration-color: $accentColor;
-    text-underline-offset: 0.7rem;
-    text-decoration-thickness: 0.2rem;
-}
-
-
-input:hover, input:focus, textarea:hover, textarea:focus {
-    border-color: $accentColor;
-    background-color: $mainColorTransparent2;
+.submitButton button {
+    @include hover {
+        border: .3rem solid $accentColor;
+        text-decoration: underline;
+        text-decoration-color: $accentColor;
+        text-underline-offset: 0.7rem;
+        text-decoration-thickness: 0.2rem;
+    }
 }
 
 
-
+input,
+textarea {
+    &:focus {
+        background-color: rgba($backgroundDark, 0.8);
+    }
+}

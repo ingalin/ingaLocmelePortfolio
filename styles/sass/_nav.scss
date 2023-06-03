@@ -1,7 +1,19 @@
 // Header navigation 
 nav {
-    padding-top: 20px;
+    header & {
+        padding-top: 2rem;
+
+    }
 }
+
+header nav {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 4;
+}
+
 
 .activeNav {
     text-decoration: underline;
@@ -16,19 +28,136 @@ nav {
 
 nav ul {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    gap: 3rem;
+
+    @include mediaQ($tablet) {
+        gap: 1rem;
+
+        footer & {
+            gap: 0.2rem;
+            flex-wrap: wrap;
+        }
+    }
+
     li {
-        margin-left: 25px;
         a {
-            color: $headerColor;
+            @extend .link-primary;
+            color: $text;
             text-transform: uppercase;
-            letter-spacing: 2.3px;
-            min-width: 150px;
+            letter-spacing: 0.23rem;
+            min-width: 15rem;
             display: block;
             text-align: center;
+
+            footer & {
+                font-size: 1.6rem;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                min-width: auto;
+            }
+
+            @include mediaQ($tablet) {
+                min-width: 12rem;
+            }
         }
     }
 }
 
+@media (max-width: $md) {
 
+    /* Navigation menu header */
+    .headerMenuDrop {
+        .mobileMenu {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
 
+            button {
+                text-transform: uppercase;
+                display: block;
+                border: none;
+                background: none;
+                padding: .5rem 2rem .5rem 10rem;
+                border: .3rem solid transparent;
+                display: flex;
+                align-items: center;
+                color: $text;
+                text-decoration: none;
+
+                i {
+                    font-size: 4rem;
+                }
+
+                span {
+                    margin-left: 1.5rem;
+                }
+            }
+        }
+
+        .mobileMenu li {
+            position: relative;
+
+            a {
+                display: inline-block;
+                padding-top: 2rem;
+                padding-bottom: 2rem;
+                color: rgba($backgroundDark, 0.85);
+                background-color: $text;
+                text-align: left;
+            }
+        }
+
+        .mobileMenu button:focus-within {
+            i {
+                color: $accentColor;
+            }
+        }
+
+        ul.mobileSubMenu {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1;
+            margin: 0;
+            padding: 0;
+        }
+
+        .mobileMenu li:focus-within ul.mobileSubMenu {
+            display: block;
+            z-index: 2;
+        }
+
+        .mobileSubMenu li {
+            display: block;
+            margin: 0;
+        }
+
+        ul.mobileSubMenu li a {
+            width: 100%;
+            margin: 0;
+        }
+
+        .mobileSubMenu li:focus-within a,
+        .mobileSubMenu li:hover a {
+            color: $text;
+            background-color: $focusColor;
+            border-color: $accentColor;
+        }
+
+        .mobileMenu li:focus-within .middleList {
+            display: none;
+        }
+
+        .mobileMenu li:focus-within li:nth-child(2),
+        .mobileMenu li:focus-within li:nth-child(5) {
+            border-top: none;
+        }
+
+        .mobileMenu li:focus-within li:nth-child(2) {
+            border-bottom: none;
+        }
+    }
+}

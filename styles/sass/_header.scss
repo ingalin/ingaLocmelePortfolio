@@ -1,96 +1,183 @@
 /* Main Header background */
 
 .indexHeader {
-    background-color: $backgroundDark;
-    background-image: url(./assets/IMG_1297.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 605px;
+    background-color: $bodyColor;
+    min-height: 85.5rem;
     height: 100vh;
-    background-position: center center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    color: $headerColor;
-}
-
-.headerText {
-    background-color: $mainColorTransparent;
-    min-height: 530px;
-    width: calc(50% + 250px);
-    display: flex;
-    justify-content: flex-end;
-}
-
-.headingText{
-    display: flex;
-    align-items: center;
-    width: 820px;
-}
-
-.headings {
-    margin-left: 50px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    min-height: 100%;
-}
-
-.mainHeading{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 455px;
-    padding-bottom: 60px;
+
+    @include mediaQ($std) {
+        min-height: 70rem;
+    }
 }
 
-.readMore {
-    min-height: 30px;
-    margin: 15px 0 30px -30px;
-    display: flex;
-    flex-direction: row;
-    max-width: 50%;
-    .linkToAbout {
+header {
+    position: relative;
+
+    >img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        mix-blend-mode: difference;
+        z-index: 1;
+    }
+
+    &:after {
+        content: "";
         display: block;
-        width: 80%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 40%;
+        background: linear-gradient(transparent, $backgroundDark 95%);
+        z-index: 2;
     }
-    .scroll {
-        margin-top: 5px;
-        width: 20%;
-        padding: 0;
-        &:focus, &:hover {
-            background-color: transparent;
-            border: transparent solid 2px;
-        }
-        &:after {
-            content: none;
-        }
+}
+
+.headerText {
+    display: flex;
+    position: relative;
+    left: -230rem;
+    z-index: 3;
+
+    @include mediaQ($xSm) {
+        left: -70rem;
     }
-    figure {
+
+    &.slideIn {
+        left: 0;
+        transition: left 1.8s ease;
+    }
+
+    h1 {
+        margin: 2.2rem 0 3.2rem;
+    }
+}
+
+
+.headings {
+    margin-left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 14rem 6rem 16.5rem 0;
+    width: calc(((100% - 8rem) / 3) * 2 + 4rem);
+    position: relative;
+
+    &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: calc(((100% - 8rem) / 3) * 2 + 4rem + 50vw);
+        height: 100%;
+        background-color: rgba($mainColor, 0.8);
+    }
+
+    @include mediaQ($std) {
+        padding: 8rem 4rem 10.5rem 0;
+    }
+
+    @include mediaQ($md) {
+        width: 90%;
+    }
+
+    @include mediaQ($xSm) {
+        padding: 6rem 2rem 8.5rem 0;
         width: 100%;
     }
+
+    @include mediaQ(rem(350)) {
+        padding: 4rem 2rem 4.5rem 0;
+        margin-left: 0;
+    }
+
+    >* {
+        z-index: 1;
+        position: relative;
+    }
+
+    h2 {
+        @include minMediaQ($sm) {
+            &:before {
+                content: "";
+                height: 0.2rem;
+                background: $text;
+                display: inline-block;
+                width: 12rem;
+                position: relative;
+                bottom: 2.6rem;
+                left: 0;
+                margin-right: 3rem;
+            }
+
+        }
+    }
+
+    @include minMediaQ($sm) {
+        >*:not(h2) {
+            margin-left: 15rem;
+        }
+    }
+
+    .readMore {
+        a {
+
+            &:before {
+                position: absolute;
+                content: '';
+                height: 0.2rem;
+                bottom: -1rem;
+                left: 0;
+                width: 45%;
+                background: $accentColor;
+            }
+
+            &:after {
+                content: "";
+                @include fontAwesome("\f078");
+                font-size: 2.2rem;
+                padding-left: 3rem;
+                position: relative;
+                top: 0.25rem;
+
+
+                @include mediaQ(76.8rem) {
+                    padding-left: 2rem;
+                }
+            }
+
+            @include hover {
+                color: $text;
+
+                &:after {
+                    animation: vertical-shaking 0.8s infinite;
+                }
+            }
+        }
+    }
 }
 
-.readMore a {
-    position: relative;
-    font-weight: 700;
-    letter-spacing: 1.5px;
+
+
+
+
+@keyframes vertical-shaking {
+    0% {
+        transform: translateY(.5rem)
+    }
+
+    50% {
+        transform: translateY(-.5rem)
+    }
+
+    100% {
+        transform: translateY(.5rem)
+    }
 }
-
-.readMore a:hover, .readMore a:focus {
-    text-decoration: none;
-}
-
-.readMore a:after {
-    position: absolute;
-    content: '';
-    height: 0.2rem;
-    bottom: 0.5rem; 
-    margin-left: 30px;
-	left: 0;
-	width: 45%;
-	background: $accentColor;
-}
-
-
-

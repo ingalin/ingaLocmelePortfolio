@@ -1,3 +1,4 @@
+@import "globalMixins";
 @import 'setup';
 @import 'global';
 @import 'header';
@@ -7,5 +8,3 @@
 @import 'section3';
 @import 'footer';
 @import 'messageForm';
-@import 'projects';
-@import '_mediaQueries';

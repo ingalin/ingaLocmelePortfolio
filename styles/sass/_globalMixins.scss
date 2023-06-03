@@ -1,0 +1,70 @@
+/* GLOBAL MIXINS */
+
+
+@mixin fontAwesome($icon: "\f0da") {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: $icon;
+}
+
+@mixin mediaQ($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+
+@mixin minMediaQ($width) {
+    @if unit($width)=="rem" {
+        $px: rem(1px);
+
+        @media screen and (min-width: $width + $px) {
+            @content;
+        }
+    }
+
+    @else {
+        @media screen and (min-width: $width + 1px) {
+            @content;
+        }
+    }
+}
+
+@mixin minMaxMediaQ($min, $max) {
+    @if unit($min)=="rem" {
+        $px: rem(1px);
+
+        @media screen and (max-width: $max) and (min-width: $min + $px) {
+            @content;
+        }
+    }
+
+    @else {
+        @media screen and (max-width: $max) and (min-width: $min + 1px) {
+            @content;
+        }
+    }
+}
+
+
+@mixin hover {
+
+    &:hover,
+    &:focus {
+        @content;
+    }
+}
+
+// Fonts
+@mixin mainFont($mainFont) {
+    font-family: 'Poppins', sans-serif;
+    font-size: $mainFont;
+}
+
+@mixin secondaryFont($secondaryFont) {
+    font-family: 'Lato', sans-serif;
+    font-size: $secondaryFont;
+}

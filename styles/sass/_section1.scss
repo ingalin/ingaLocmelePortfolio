@@ -1,79 +1,108 @@
 // Section1
 .aboutSection {
-    background-image: url(./assets/IMG_1265_.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    min-height: 600px;
-    background-position: center center;
-    padding: 50px 0;
+    padding: 10rem 0;
+    position: relative;
+
+    @include mediaQ($tablet) {
+        padding: 2rem 0 6rem;
+    }
 }
 
 .aboutSectionImgText {
     display: flex;
     justify-content: space-between;
     height: 100%;
+    position: relative;
+    z-index: 1;
+
+    @include mediaQ($md) {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .aboutText {
+            width: 100%;
+        }
+
+        .aboutImg {
+            margin-bottom: 4rem;
+            padding-right: 0;
+        }
+    }
 }
 
 .aboutText {
-    width: calc(65% - 80px);
+    width: calc(65% - 8rem);
     display: flex;
     flex-direction: column;
-    padding-top: 50px;
+
     h3 {
-        margin: 0;
+        margin: 0 0 1rem;
     }
+
     p {
-        padding-top: 20px;
+        padding-top: 2rem;
     }
 }
 
 .aboutImg {
-    width: calc(35% - 20px);
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-right: 5rem;
+
+    @include minMediaQ($sm) {
+        padding-top: 3.5rem;
+    }
+
     img {
-        margin: -55px 0 0 65px;
+        margin: -6rem 0 0 6rem;
+        width: 33rem;
     }
 }
 
 .box {
-    width: 290px;
-    height: 415px;
+    width: 33rem;
+    height: 48rem;
+
 }
 
 .box1 {
-    border: 20px solid;
-    border-image-source: linear-gradient(135deg, $headerColorTransparent 35%, $backgroundDarkTransparent);
+    border: 2rem solid;
+    border-image-source: linear-gradient(135deg, rgba($text, 0.5) 15%, rgba($backgroundDark, 0.3));
     border-image-slice: 1;
 }
 
-// About text 
+@media (max-width:$xLg) {
 
-.details {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
-    img {
-        width: 15%;
-    }
-}
 
-.details2 {
-    display: flex;
-    justify-content: space-between;
-    width: calc(50% - 20px);
-    div {
-        margin-left: 20px;
-        margin-bottom: -50px;
-        span {
-            display: block;
-        }
-    }
-    p {
+    .aboutText {
+        width: calc(65% - 4rem);
         padding-top: 0;
     }
+
+    .aboutImg img {
+        margin: -3.5rem 0 0 3.5rem;
+    }
+
 }
 
 
+@media (max-width: $xSm) {
 
+    .aboutSection {
+        padding: 4rem 0;
+    }
+
+    .box {
+        width: 20rem;
+        height: 28rem;
+    }
+
+    .box1 {
+        border: 1rem solid;
+        border-image-source: linear-gradient(135deg, rgba($text, 0.5) 35%, rgba($backgroundDark, 0.3));
+        border-image-slice: 1;
+    }
+
+
+}

@@ -1,52 +1,49 @@
 // Colors
-$backgroundDark: #353535;
-$backgroundDarkTransparent: rgba(53, 53, 53, 0.3);
-$backgroundDarkTransparentDarker: rgba(53, 53, 53, 0.7);
-$backgroundDarkTransparentDarker2: rgba(53, 53, 53, 0.85);
+$backgroundDark: #232323;
+$text: #ffffff;
 $mainColor: #ae4b15;
-$mainColorTransparent: rgba(174,75,21,0.85);
-$mainColorTransparent1: rgba(174,75,21,0.95);
-$mainColorTransparent2: rgba(174,75,21,0.07);
-$headerColor: #ffffff;
-$headerColorTransparent: rgba(255, 255, 255, 0.5);
-$headerColorTransparent2: rgba(255, 255, 255, 0.8);
-$accentColor: #e45507;
-$accentColorTransparent: rgba(228, 85, 7, 0.95);
+$accentColor: #fd6817;
 $focusColor: #000000;
 $bodyColor: #333333;
-$paragraphColor: #515151;
 
-// Fonts
-@mixin mainFont($mainFont){
-    font-family: 'Poppins', sans-serif;
-    font-size: $mainFont;
-}
+$xStd: 1450px;
+$std: 1366px;
+$xLg: 1280px;
+$lg: 1150px;
+$mobNav: 1024px;
+$tablet: 1024px;
+$md: 950px;
+$sm: 768px;
+$lgPhone: 640px;
+$xSm: 500px;
 
-@mixin secondaryFont($secondaryFont){
-    font-family: 'Lato', sans-serif;
-    font-size: $secondaryFont;
-    color: $headerColor;
-}
 
 // General selectors
 * {
     padding: 0;
     margin: 0;
+
 }
 
 html {
     font-size: 62.5%;
 }
 
+
 .wrapper {
-    max-width: 1140px;
-    width: 90%;
+    max-width: 165rem;
+    width: calc(100% - 8rem);
     margin: 0 auto;
+
+    @include mediaQ($lgPhone) {
+        width: calc(100% - 4rem);
+    }
 }
 
 body {
     @include secondaryFont(1.8rem);
-    color: $bodyColor;
+    color: $text;
+    background-color: $backgroundDark;
 }
 
 img {
@@ -60,81 +57,157 @@ figure {
     margin: 0;
 }
 
-a:hover, a:focus  {
-    background: $focusColor;
-    border: 1px $headerColor solid; 
-    text-decoration: underline;
-    text-decoration-color: $accentColor;
-    text-underline-offset: 0.5rem;
-    text-decoration-thickness: 0.2rem;
+
+.link-primary,
+button {
+    @include mainFont(1.8rem);
+    text-decoration: none;
+    padding: 1.5rem 3rem;
+    border: .1rem transparent solid;
+    @include hover {
+        background: $focusColor;
+        border: .1rem $text solid;
+        text-decoration: underline;
+        text-decoration-color: $accentColor;
+        text-underline-offset: 0.5rem;
+        text-decoration-thickness: 0.2rem;
+    }
 }
 
-a, button {
-    @include mainFont(1.8rem);
-    color: $headerColor;
-    text-decoration: none;
-    padding: 15px 30px;
-    border: 1px transparent solid; 
+button {
+    cursor: pointer;
 }
+
+.link-text {
+    @include mainFont(1.8rem);
+    color: $text;
+    text-decoration: none;
+    padding: 1.5rem 0 0;
+    position: relative;
+    font-weight: 600;
+    letter-spacing: 0.15rem;
+    text-transform: capitalize;
+
+    @include hover {
+        color: lighten($accentColor, 12%);
+    }
+}
+
 
 ul {
     list-style: none;
 }
 
 p {
-    color: $paragraphColor;
-    font-weight: 600;
+    font-weight: 300;
     line-height: 3rem;
-    letter-spacing: 0.8px;
+    letter-spacing: 0.07rem;
+
+    &.leadin {
+        font-size: 2.1rem;
+        font-weight: 400;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 600;
 }
 
 h1 {
-    @include mainFont(2.4rem);
-    font-weight: lighter; 
-    letter-spacing: 2px;
-    font-weight: 700;
-    line-height: 3.5rem;
+    @include secondaryFont(3.2rem);
+    letter-spacing: .2rem;
+    line-height: 5rem;
 }
 
 h2 {
-    @include mainFont(7.2rem);
+    @include mainFont(7.5rem);
 }
 
-h3 {
-    @include mainFont(3.6rem);
-    letter-spacing: 2px;
-    margin-bottom: 20px;
-    position: relative;
+
+@media (max-width: $sm) {
+    h2 {
+        font-size: 6rem;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: $xSm) {
+
+    h1 {
+        font-size: 2.2rem;
+        line-height: 1.7;
+    }
+}
+
+section,
+footer {
+    h2 {
+        @include mainFont(3.6rem);
+        letter-spacing: .2rem;
+        margin-bottom: 2rem;
+        position: relative;
+        &:after {
+            content: '';
+            width: 12rem;
+            height: 0.2rem;
+            background: $accentColor;
+            display: inline-block;
+        }
+    }
+}
+
+.h2side {
+    @include minMediaQ(420px) {
+        &:after {
+            position: relative;
+            bottom: 1.2rem;
+            margin-left: 3rem;
+            right: 0;
+
+        }
+    }
+
+    @include mediaQ(420px) {
+        margin-bottom: 2rem !important;
+
+        &:after {
+            position: absolute;
+            bottom: -1.2rem;
+            left: 0;
+        }
+    }
+}
+
+.h2center {
+    margin-bottom: 7rem;
+    text-align: center;
+
+
     &:after {
         position: absolute;
-        content: '';
-        height: 0.2rem;
-        bottom: 1.8rem; 
-        margin-left: 220px;
-        left: 0;
-        width: 120px;
-        background: $backgroundDarkTransparent;
+        bottom: -1.2rem;
+        left: 50%;
+        transform: translate(-50%, 0);
+        margin-left: 0;
     }
 }
 
 h4 {
     @include mainFont(2rem);
-    margin-bottom: 10px;
 }
 
-hr {
-    color: $headerColor;
-    display: block;
-    width: 100px;
-    margin-top: -19.5rem;
-}
 
-.section2, .section3Background {
-    overflow: hidden;
-}
+
 
 // Fill the color of icons
-.filter{
+.filter {
     filter: invert(47%) sepia(87%) saturate(4487%) hue-rotate(4deg) brightness(94%) contrast(94%);
 }
 
@@ -145,31 +218,53 @@ hr {
 // Animations
 
 @keyframes programs {
-    0%   {left:30px;}
-    100% {left:0px;}
+    0% {
+        left: 3rem;
+    }
+
+    100% {
+        left: 0;
+    }
 }
 
 @keyframes animateSkills {
-    10%, 90% {transform: translate3d(-1px, 0, 0);}
-    20%, 80% {transform: translate3d(2px, 0, 0);}
-    30%, 50%, 70% {transform: translate3d(-4px, 0, 0);}
-    40%, 60% {transform: translate3d(4px, 0, 0);}
+
+    10%,
+    90% {
+        transform: translate3d(-.1rem, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(.2rem, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-.4rem, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(.4rem, 0, 0);
+    }
 }
 
-.programsUsed, .moreInfoHover h3 {
+.programsUsed,
+.moreInfoHover h3 {
     position: relative;
     animation-name: programs;
     animation-duration: 0.5s;
     animation-timing-function: ease-out;
 }
 
-.eachSkill figure:hover, .filterWhite:hover, .eachSkill figure:focus, .filterWhite:focus {
-    animation: animateSkills 0.82s cubic-bezier(.36,.07,.19,.97) both;
+.eachSkill figure:hover,
+.filterWhite:hover,
+.eachSkill figure:focus,
+.filterWhite:focus {
+    animation: animateSkills 0.82s cubic-bezier(.36, .07, .19, .97) both;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;
-    perspective: 1000px;
+    perspective: 100rem;
 }
-
-
-
-

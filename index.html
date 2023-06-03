@@ -4,12 +4,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Inga Locmele's Portfolio">
     <title>Inga Locmele's Portfolio</title>
     <script src="https://kit.fontawesome.com/d50e3b07e2.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;700&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap"
         rel="stylesheet">
 </head>
 
@@ -36,7 +38,7 @@
                             <a href="#skills">skills</a>
                         </li>
                         <li>
-                            <a href="projects.html">projects</a>
+                            <a href="#portfolio">portfolio</a>
                         </li>
                         <li>
                             <a href="#contact">contact</a>
@@ -45,293 +47,428 @@
                 </li>
             </ul>
         </nav>
-        <div class="headerText">
-            <div class="headingText">
-                <hr />
-                <div class="headings">
-                    <div class="mainHeading">
-                        <h2>Hello,</h2>
-                        <h1>I'm Inga, A Front-End Web Developer</h1>
-                    </div>
-                    <div class="readMore">
-                        <a href="#about" class="linkToAbout">Read More</a>
-                        <a href="#about" class="scroll">
-                            <figure aria-label="scroll down">
-                                <img class="filterWhite" aria-hidden="true"
-                                    src="styles/assets/icons/chevron-down-outline.svg" alt="scroll down" />
-                            </figure>
-                        </a>
-                    </div>
+        <img src="styles/assets/IMG_1297.jpeg" alt="photo of Toronto, Canada" width="2543" height="1007">
+        <div class="wrapper headerText">
+            <div class="headings">
+                <h2>Hello,</h2>
+                <h1>I'm Inga, A Frontend Web Developer</h1>
+                <div class="readMore">
+                    <a class="link-text" href="#about" class="linkToAbout">Read More</a>
                 </div>
             </div>
         </div>
     </header>
     <main>
         <section class="aboutSection" id="about">
+            <!-- <img src="styles/assets/IMG_1265_.jpg" alt="Background photo of the city" width="4000" height="2667" aria-hidden="true"> -->
             <div class="wrapper aboutSectionImgText">
                 <div class="aboutImg">
                     <figure class="box box1">
-                        <img src="styles/assets/IMG_1363.jpg" alt="Photo of Inga, web developer" />
+                        <img src="styles/assets/IMG_1363.jpg" width="250" height="375"
+                            alt="Photo of Inga, web developer" />
                     </figure>
                 </div>
                 <div class="aboutText">
                     <div>
-                        <h3>About Me</h3>
-                        <p>My name is Inga Locmele and I am a front-end web developer with a background in database
-                            administration and information management.</p>
-                        <p>I am passionate about creating web applications with clean, reusable code that are
-                            accessible, responsive, and provide a
-                            great user experience.</p>
-                        <p>My hobby is photography which helps to work with different UI designs. All photos you see on
-                            this website are taken and edited by me.</p>
-                    </div>
-                    <div class="details">
-                        <div class="details2">
-                            <img aria-hidden="true" class="filter" src="styles/assets/icons/layers.svg"
-                                alt="layers icon" />
-                            <div>
-                                <h4>Web <span>Development</span></h4>
-                                <p>Accessible and responsive applications.</p>
-                            </div>
-                        </div>
-                        <div class="details2">
-                            <img aria-hidden="true" class="filter" src="styles/assets/icons/bar-chart.svg"
-                                alt="charts icon" />
-                            <div>
-                                <h4>Database <span>Management</span></h4>
-                                <p>More than 10 years of experience.</p>
-                            </div>
-                        </div>
+                        <h2 class="h2side">About Me</h2>
+                        <p class="leadin">My name is Inga Locmele, and I am a frontend web developer with over 3 years
+                            of professional experience.
+                            Currently, I work remotely for Delta4 Digital Inc., a digital marketing company
+                            based in Ontario, Canada.</p>
+                        <p>At Delta4 Digital Inc., our primary focus is building websites for clients across Canada and
+                            the United States, utilizing Tymbrel CMS as our foundation.
+                            We provide a comprehensive range of services, including both template-based and fully
+                            custom-built websites.</p>
+                        <p>Last year, Delta4 Digital Inc. launched over 500 websites with just two frontend developers.
+                            This achievement highlights the exceptional productivity and expertise of our frontend
+                            development team.</p>
+                        <p>In addition to my frontend skills, I have a solid background in database administration and
+                            information management.
+                            With over 10 years of experience in this field, I have also gained valuable leadership
+                            abilities by leading a team of 10 employees.</p>
+                        <p>Furthermore, my passion for photography greatly enhances my ability to work with diverse UI
+                            designs. This hobby has honed my eye for visual aesthetics,
+                            composition, and attention to detail, enabling me to create visually captivating and
+                            user-friendly interfaces.</p>
+                        <p>The combination of technical skills and creative sensibility derived from my photography
+                            background sets me apart in delivering exceptional frontend experiences.</p>
                     </div>
                 </div>
             </div>
         </section>
         <section class="section2" id="skills">
             <div class="skills">
-                <h3>My Skills</h3>
+                <h2 class="h2center">My Skills</h2>
                 <div class="skillSets">
                     <div class="eachSkill">
                         <figure aria-hidden="true">
-                            <img class="filter" src="styles/assets/icons/logo-html5.svg" alt="html5 icon" />
+                            <img width="1" height="1" class="filter" src="styles/assets/icons/logo-html5.svg"
+                                alt="html5 icon" />
                         </figure>
-                        <h5>HTML5</h5>
+                        <p>HTML5</p>
                     </div>
                     <div class="eachSkill">
                         <figure aria-hidden="true">
-                            <img class="filter" src="styles/assets/icons/logo-css3.svg" alt="cdd3 icon" />
+                            <img width="1" height="1" class="filter" src="styles/assets/icons/logo-css3.svg"
+                                alt="cdd3 icon" />
                         </figure>
-                        <h5>CSS3</h5>
+                        <p>CSS3</p>
                     </div>
                     <div class="eachSkill">
                         <figure aria-hidden="true">
-                            <img class="filter" src="styles/assets/icons/logo-sass.svg" alt="sass icon" />
+                            <img width="1" height="1" style="height:9rem;" class="filter"
+                                src="styles/assets/icons/logo-sass.svg" alt="sass icon" />
                         </figure>
-                        <h5>SASS</h5>
+                        <p>SASS</p>
                     </div>
                     <div class="eachSkill">
                         <figure aria-hidden="true">
-                            <img class="filter" src="styles/assets/icons/logo-react.svg" alt="react icon" />
-                        </figure>
-                        <h5>REACT</h5>
-                    </div>
-                </div>
-                <div class="skillSets">
-                    <div class="eachSkill">
-                        <figure aria-hidden="true">
-                            <img class="filter" src="styles/assets/icons/logo-javascript.svg" alt="JS icon" />
-                        </figure>
-                        <h5>JavaScript</h5>
-                    </div>
-                    <div class="eachSkill">
-                        <figure aria-hidden="true">
-                            <img class="filter"
-                                src="styles/assets/icons/kisspng-computer-icons-jquery-ninja-icon-5b48a418f30935.1403011215314872569955.png"
-                                alt="jquery icon" />
-                        </figure>
-                        <h5>jQuery</h5>
-                    </div>
-                    <div class="eachSkill">
-                        <figure aria-hidden="true">
-                            <img class="filter"
-                                src="styles/assets/icons/kisspng-microsoft-sql-server-microsoft-azure-sql-database-plsql-5b1ef237023ba0.8678771915287547430092.png"
-                                alt="sql icon" />
-                        </figure>
-                        <h5>SQL</h5>
-                    </div>
-                    <div class="eachSkill">
-                        <figure aria-hidden="true">
-                            <img class="filter" src="styles/assets/icons/logo-firebase.svg" alt="firebase icon" />
-                        </figure>
-                        <h5>Firebase</h5>
-                    </div>
-                </div>
-                <div class="skillSets">
-                    <div class="eachSkill">
-                        <figure aria-hidden="true">
-                            <img class="filter"
+                            <img width="7" height="8" style="width:6.5rem;" class="filter"
                                 src="styles/assets/icons/kisspng-computer-icons-download-photoshop-logo-5b51d10ca42e14.7045128115320885886725.png"
                                 alt="photoshop icon" />
                         </figure>
-                        <h5>Photoshop</h5>
+                        <p>Photoshop</p>
                     </div>
+                </div>
+                <div class="skillSets">
                     <div class="eachSkill">
                         <figure aria-hidden="true">
-                            <img class="filter" src="styles/assets/icons/logo-github.svg" alt="github icon" />
+                            <img width="1" height="1" class="filter" src="styles/assets/icons/logo-javascript.svg"
+                                alt="JS icon" />
                         </figure>
-                        <h5>GitHub</h5>
+                        <p>JavaScript</p>
                     </div>
                     <div class="eachSkill">
                         <figure aria-hidden="true">
-                            <img class="filter"
+                            <img width="1" height="1" class="filter"
+                                src="styles/assets/icons/kisspng-computer-icons-jquery-ninja-icon-5b48a418f30935.1403011215314872569955.png"
+                                alt="jquery icon" />
+                        </figure>
+                        <p>jQuery</p>
+                    </div>
+                    <div class="eachSkill">
+                        <figure aria-hidden="true">
+                            <img width="1" height="1" style="width:11rem;height:11rem;" class="filter"
+                                src="styles/assets/icons/logo-react.svg" alt="react icon" />
+                        </figure>
+                        <p>REACT</p>
+                    </div>
+
+                    <div class="eachSkill">
+                        <figure aria-hidden="true">
+                            <img width="1" height="1" class="filter" src="styles/assets/icons/logo-github.svg"
+                                alt="github icon" />
+                        </figure>
+                        <p>GitHub</p>
+                    </div>
+
+                </div>
+                <div class="skillSets">
+                    <div class="eachSkill">
+                        <figure aria-hidden="true">
+                            <img width="1" height="1" style="width:7rem;" class="filter"
+                                src="styles/assets/icons/kisspng-microsoft-sql-server-microsoft-azure-sql-database-plsql-5b1ef237023ba0.8678771915287547430092.png"
+                                alt="sql icon" />
+                        </figure>
+                        <p>SQL</p>
+                    </div>
+                    <div class="eachSkill">
+                        <figure aria-hidden="true">
+                            <img width="1" height="1" class="filter" src="styles/assets/icons/logo-firebase.svg"
+                                alt="firebase icon" />
+                        </figure>
+                        <p>Firebase</p>
+                    </div>
+                    <div class="eachSkill">
+                        <figure aria-hidden="true">
+                            <img width="1" height="1" class="filter"
                                 src="styles/assets/icons/kisspng-responsive-web-design-web-development-respond-5b20abb64b5cf9.4984798815288677663087.png"
                                 alt="responsive design icon" />
                         </figure>
-                        <h5>Responsive Design</h5>
+                        <p>Responsive Design</p>
                     </div>
                     <div class="eachSkill">
                         <figure aria-hidden="true">
-                            <img class="filter" src="styles/assets/icons/accessibility-outline.svg"
-                                alt="accessible websites icon" />
+                            <img width="1" height="1" style="height:7rem;" class="filter"
+                                src="styles/assets/icons/accessibility-outline.svg" alt="accessible websites icon" />
                         </figure>
-                        <h5>Accessible Websites</h5>
+                        <p>Accessible Websites</p>
                     </div>
                 </div>
-            </div>
-            <div class="box box1">
-                <figure>
-                    <img src="styles/assets/IMG_8528_.jpg" alt="Photo of the Toronto at sunset" />
-                </figure>
             </div>
         </section>
-        <div class="section3Background">
+        <div class="section3Background" id="portfolio">
             <section class="section3 wrapper">
-                <div class="portfolio">
-                    <h3>Portfolio</h3>
-                    <div class="readMore">
-                        <a href="projects.html">View All Projects</a>
+
+                <h2 class="h2center">Portfolio</h2>
+                <div class="projectList projectListFirst">
+                    <div class="row-8">
+
+                        <div class="eachProject">
+                            <figure>
+                                <img src="styles/assets/new-templates.jpg" alt="New Tymbrel templates" width="1080"
+                                    height="570">
+                            </figure>
+
+
+
+                            <div class="projectDescription">
+                                <h3>New Tymbrel CMS template</h3>
+                                <div class="readMore">
+                                    <button class="link-text">Read more</button>
+                                </div>
+                                <div class="readMoreProject">
+                                    <ul class="programsUsed">
+                                        <li>CMS</li>
+                                        <li>jQuery</li>
+                                        <li>SASS</li>
+                                        <li>Smarty</li>
+                                    </ul>
+                                    <p>One of my major projects at Delta4 Digital was designing and implementing over 80
+                                        master templates, prioritizing responsiveness for seamless adaptation across
+                                        different screen sizes and text lengths.</p>
+                                    <p>In contrast to our older template, I improved the internal template setup by
+                                        integrating new JS code, enabling easy mixing and matching of various template
+                                        components.</p>
+                                    <p>Furthermore, I added these templates to the Tymbrel CMS using Smarty, empowering
+                                        content managers to efficiently manage and update the templates within the CMS
+                                        environment.</p>
+                                    <figure>
+                                        <img src="styles/assets/new-templates.png" alt="New tymbrel templates"
+                                            width="423" height="244">
+                                    </figure>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row-4">
+                        <div class="eachProject">
+                            <figure>
+                                <img width="510" height="570" src="styles/assets/job-search.jpg"
+                                    alt="Job Search Website" />
+                            </figure>
+                            <div class="projectDescription">
+                                <h3>Job Search Website</h3>
+                                <div class="readMore">
+                                    <button class="link-text">Read more</button>
+                                </div>
+                                <div class="readMoreProject">
+                                    <ul class="programsUsed">
+                                        <li>REACT</li>
+                                        <li>Firebase</li>
+                                        <li>CSS3</li>
+                                    </ul>
+                                    <p>This REACT project was developed during my studies at Juno College. I completed
+                                        all the REACT coding in less than a week! The project utilizes the Adzuna API as
+                                        its foundation, and all information is stored in Firebase. It offers several
+                                        features:</p>
+                                    <ul class="featuresList">
+                                        <li>Location and keyword-based search</li>
+                                        <li>User account registration</li>
+                                        <li>Ability to save favorite jobs</li>
+                                        <li>Remove saved listings</li>
+                                        <li>Pagination</li>
+                                        <li>Error handling</li>
+                                    </ul>
+                                    <div class="linksToProjects">
+                                        <a target="_blank" rel="noopener"
+                                            href="https://master--fluffy-creponne-7e8f15.netlify.app/">View Live</a>
+                                        <span>||</span>
+                                        <a target="_blank" rel="noopener"
+                                            href="https://github.com/ingalin/jobSearchWebsite.git">GitHub</a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
-                <p class="srOnly">Please use Previous, Next buttons to navigate through carousel.</p>
-                <p class="instructions">* Click on an image to find out more info about a project or <a
-                        href="projects.html">view all projects here.</a></p>
-                <!-- Flickity.com carousel // code adjusted in flickity.js (check for note //Inga) and script.js for better user experience-->
-                <ul class="carousel"
-                    data-flickity='{ "cellAlign": "center", "contain": true, "freeScroll": true, "wrapAround": true, "autoPlay": true }'>
-                    <li class="carousel-cell" aria-label="Pictures of Geography Quiz Project">
-                        <button aria-label="More info about Geography Quiz">
-                            <figure aria-hidden="true">
-                                <img src="styles/assets/media-774068_1280_g.png" alt="geography quiz pictures" />
-                            </figure>
-                        </button>
-                        <div class="moreInfoHover" role="alert">
+                <div class="projectList projectListSecond">
+                    <div class="row-3 eachProject">
+                        <figure>
+                            <img width="423" height="381" src="styles/assets/straight-smiles.jpg"
+                                alt="Straight Smile Centres" />
+                        </figure>
+                        <div class="projectDescription">
+                            <h3>Straight Smile Centres</h3>
+                            <div class="readMore">
+                                <button class="link-text">Read more</button>
+                            </div>
+                            <div class="readMoreProject">
+                                <ul class="programsUsed">
+                                    <li>CMS</li>
+                                    <li>jQuery</li>
+                                    <li>SASS</li>
+                                    <li>Smarty</li>
+                                </ul>
+                                <p>I'm currently developing a custom website at Delta4 Digital, collaborating closely
+                                    with the backend team. We've achieved significant improvements in the site's page
+                                    speed and CLS by removing unnecessary JS code and implementing optimized CSS code
+                                    with Tymbrel variables. This efficient and reusable code will enhance performance
+                                    for future websites.</p>
+                                <p>The website will be launching soon, and I can't wait to share it with you!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-3 eachProject">
+                        <figure>
+                            <img width="423" height="381" src="styles/assets/geography-quiz.jpg" alt="Geography Quiz" />
+                        </figure>
+                        <div class="projectDescription">
                             <h3>Geography Quiz</h3>
-                            <p class="projectDesc">Geography Game for kids in Class 1, 2 & 3, but adults enjoy this
-                                gamuch as kids.
-                                &#128522; </p>
-                            <p class="extraInfoHide">30 randomly selected questions in limited time and bonus points!
-                            </p>
-                            <div class="linksToProjects">
-                                <a href="projects.html#geography">Read More</a>
-                                <p>||</p>
-                                <a href="https://quizzical-gates-8f222d.netlify.app/">View Live</a>
-                                <p>||</p>
-                                <a href="https://github.com/ingalin/ingaLocmeleProjectThree">GitHub</a>
+                            <div class="readMore">
+                                <button class="link-text">Read more</button>
                             </div>
-                            <div class="programsUsed">
-                                <p>JavaScript</p>
-                                <p>jQuery</p>
-                                <p>HTML5</p>
-                                <p>SASS</p>
-                                <p>Design</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="carousel-cell" aria-label="Pictures of Job Search project">
-                        <button aria-label="More info about Job Search Website">
-                            <figure aria-hidden="true">
-                                <img src="styles/assets/media-774068_1280_job.png" alt="job search project pictures" />
-                            </figure>
-                        </button>
-                        <div class="moreInfoHover" role="alert">
-                            <h3>Job Search Site</h3>
-                            <p class="projectDesc">Find your job in Toronto.</p>
-                            <p class="projectDesc">Search by location or keywords, Log In, make your personal wish list
-                                and apply for the job!</p>
-                            <div class="linksToProjects">
-                                <a href="projects.html#job">Read More</a>
-                                <p>||</p>
-                                <a href="https://naughty-ride-83407d.netlify.app/">View Live</a>
-                                <p>||</p>
-                                <a href="https://github.com/ingalin/inga-locmele-project-five-new">GitHub</a>
-                            </div>
-                            <div class="programsUsed">
-                                <p>REACT</p>
-                                <p>HTML5</p>
-                                <p>CSS3</p>
-                                <p>Firebase</p>
-                                <p>Design</p>
+                            <div class="readMoreProject">
+                                <ul class="programsUsed">
+                                    <li>JQuery</li>
+                                    <li>SASS</li>
+                                    <li>Design</li>
+                                </ul>
+                                <p>Introducing a Geography Game suitable for all ages.</p>
+                                <p>Each game features 30 simple questions randomly selected from a pool of 55. The
+                                    answers to each question are presented in a randomized order.</p>
+                                <p>With a limit of 2 mistakes allowed and decreasing time per level, don't fret!
+                                    Reaching a new level earns you bonus points. Keep an eye out for globes and stars!
+                                </p>
+                                <div class="linksToProjects" style="margin-top:2.3rem;">
+                                    <a target="_blank" rel="noopener"
+                                        href="https://quizzical-gates-8f222d.netlify.app/">View Live</a>
+                                    <span>||</span>
+                                    <a target="_blank" rel="noopener"
+                                        href="https://github.com/ingalin/geographyQuiz">GitHub</a>
+                                </div>
                             </div>
                         </div>
-                    </li>
-                    <li class="carousel-cell" aria-label="Pictures of Event planner project">
-                        <button aria-label="More info about Event planner project">
-                            <figure aria-hidden="true">
-                                <img src="styles/assets/media-774068_1280_evente.png" alt="event planner pictures" />
-                            </figure>
-                        </button>
-                        <div class="moreInfoHover" role="alert">
+                    </div>
+                    <div class="row-3 eachProject">
+                        <figure>
+                            <img src="styles/assets/pure-medical.jpg" alt="Pure Medical Cosmetics website" width="423"
+                                height="381">
+                        </figure>
+                        <div class="projectDescription">
+                            <h3>Pure Medical Cosmetics</h3>
+                            <div class="readMore">
+                                <button class="link-text">Read more</button>
+                            </div>
+                            <div class="readMoreProject">
+                                <ul class="programsUsed">
+                                    <li>CMS</li>
+                                    <li>jQuery</li>
+                                    <li>SASS</li>
+                                    <li>Smarty</li>
+                                </ul>
+                                <p>I contributed to the development of a custom-built website for Pure Medical
+                                    Cosmetics, an Ottawa-based clinic. As part of the Delta4 Digital team, I wrote CSS
+                                    and JS code for the templates and integrated them into the Tymbrel
+                                    platform. Together, we created a visually appealing and cohesive website, enabling
+                                    the clinic to establish a strong online presence and effectively engage
+                                    with their audience.</p>
+
+                                <div class="linksToProjects" style="margin-top:2.3rem;">
+                                    <a target="_blank" rel="noopener"
+                                        href="https://www.puremedicalcosmetics.com/site/home">View Live</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-3 eachProject">
+                        <figure>
+                            <img src="styles/assets/event-planner.jpg" alt="Event Planner" width="423" height="381">
+                        </figure>
+                        <div class="projectDescription">
                             <h3>Event Planner</h3>
-                            <p class="projectDesc">Are you in a lockdown? Try this "replace your event" app! Choose an
-                                event you don't want to attend and get a TV show list instead.</p>
-                            <div class="linksToProjects">
-                                <a href="projects.html#eventPlanner">Read More</a>
-                                <p>||</p>
-                                <a href="https://cranky-kilby-29816c.netlify.app/">View Live</a>
-                                <p>||</p>
-                                <a href="https://github.com/ingalin/ingaLocmeleProjectSix">GitHub</a>
+                            <div class="readMore">
+                                <button class="link-text">Read more</button>
                             </div>
-                            <div class="programsUsed">
-                                <p>REACT</p>
-                                <p>Firebase</p>
-                                <p>HTML5</p>
-                                <p>CSS3</p>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="carousel-cell" aria-label="Pictures of 48 hour challenge website">
-                        <button aria-label="More info about 48 hour challenge website">
-                            <figure aria-hidden="true">
-                                <img src="styles/assets/media-music.png" alt="48 hour challenge pictures" />
-                            </figure>
-                        </button>
-                        <div class="moreInfoHover" role="alert">
-                            <h3>48 hour challenge</h3>
-                            <p class="projectDesc">Listen to music, colorful buttons, photo reveal, cursor change
-                                etc...!!</p>
-                            <p class="projectDesc">Take a look at what I accomplished in 48 hours!</p>
-                            <div class="linksToProjects">
-                                <a href="projects.html#project4">Read More</a>
-                                <p>||</p>
-                                <a href="https://loving-jang-8e510f.netlify.app/">View Live</a>
-                                <p>||</p>
-                                <a href="https://github.com/ingalin/musicWebsite">GitHub</a>
-                            </div>
-                            <div class="programsUsed">
-                                <p>HTML5</p>
-                                <p>SASS</p>
-                                <p>jQuery</p>
+                            <div class="readMoreProject">
+                                <ul class="programsUsed">
+                                    <li>REACT</li>
+                                    <li>Firebase</li>
+                                    <li>SASS</li>
+                                    <li>Design</li>
+                                </ul>
+                                <p>I developed this fun REACT project called "NOT-SO-SOCIAL Event Planner" as part of a
+                                    team of four people during my studies at Juno College. It allows you to add unwanted
+                                    events and replace them with TV shows if you prefer.</p>
+                                <p>You can add or remove events and filter TV shows by genres. The site is built using
+                                    REACT, Firebase, and the TVMAZE API.</p>
+                                <div class="linksToProjects" style="margin-top:2.3rem;">
+                                    <a target="_blank" rel="noopener"
+                                        href="https://cranky-kilby-29816c.netlify.app/">View Live</a>
+                                    <span>||</span>
+                                    <a target="_blank" rel="noopener"
+                                        href="https://github.com/ingalin/ingaLocmeleProjectSix">GitHub</a>
+                                </div>
                             </div>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                    <div class="row-3 eachProject">
+                        <figure>
+                            <img src="styles/assets/vets-without-borders.jpg" alt="Vets Without borders website"
+                                width="423" height="381">
+                        </figure>
+                        <div class="projectDescription">
+                            <h3>Veterinarians Without Borders</h3>
+                            <div class="readMore">
+                                <button class="link-text">Read more</button>
+                            </div>
+                            <div class="readMoreProject">
+                                <ul class="programsUsed">
+                                    <li>CMS</li>
+                                    <li>jQuery</li>
+                                    <li>SASS</li>
+                                </ul>
+                                <p>This is a custom website for Veterinarians Without Borders, a non-profit charitable
+                                    organization that focuses on animal health as a way to improve the health of
+                                    communities. The site is managed on the Tymbrel
+                                    platform by the client, and I have created custom home page templates for it.</p>
+                                <div class="linksToProjects" style="margin-top:2.3rem;">
+                                    <a target="_blank" rel="noopener"
+                                        href="https://www.vetswithoutborders.ca/site/home">View Live</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row-3 eachProject">
+                        <figure>
+                            <img src="styles/assets/king.jpg" alt="King & Bay Websit" width="423" height="381">
+                        </figure>
+                        <div class="projectDescription">
+                            <h3>King & Bay Website</h3>
+                            <div class="readMore">
+                                <button class="link-text">Read more</button>
+                            </div>
+                            <div class="readMoreProject">
+                                <ul class="programsUsed">
+                                    <li>CMS</li>
+                                    <li>jQuery</li>
+                                    <li>SASS</li>
+                                </ul>
+                                <p>
+                                    This is a client-managed website using custom Tymbrel templates. Despite its small
+                                    size, the website boasts multiple features such as two sliders, video integration,
+                                    pop-ups, and an online store. To meet the specific requirements, I developed
+                                    completely original slider JS code. It was a challenging project with a tight
+                                    deadline, but I successfully completed all the coding within 3 days.</p>
+                                <div class="linksToProjects" style="margin-top:2.3rem;">
+                                    <a target="_blank" rel="noopener"
+                                        href="https://www.kingandbaynftclothing.com/site/home">View Live</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
         </div>
     </main>
     <div class="footerBackground">
+        <img src="styles/assets/IMG_1489.jpg" alt="background image of a city" width="1700" height="800">
         <footer id="contact">
             <div class="wrapper">
-                <h3>Get In Touch</h3>
-                <p class="contacHeadding">contact</p>
+                <h2 class="h2center">Get In Touch</h2>
                 <form action="https://formspree.io/f/xleopvdd" method="POST">
                     <div class="inputFields">
                         <div class="requiredFields">
@@ -357,34 +494,44 @@
                 <div class="contact">
                     <div class="contactInfo">
                         <figure aria-hidden="true">
-                            <img class="filter" src="styles/assets/icons/location-outline.svg" alt="location icon" />
+                            <img width="40" height="40" class="filter" src="styles/assets/icons/location-outline.svg"
+                                alt="location icon" />
                         </figure>
                         <div class="contactDetails">
-                            <h4>location</h4>
-                            <p>M8V, Toronto, Canada</p>
+                            <h3>location</h3>
+                            <p>Gold Coast, QLD</p>
                         </div>
                     </div>
                     <div class="contactInfo">
                         <figure aria-hidden="true">
-                            <img class="filter" src="styles/assets/icons/call-outline.svg" alt="phone icon" />
+                            <img width="40" height="40" class="filter" src="styles/assets/icons/call-outline.svg"
+                                alt="phone icon" />
                         </figure>
                         <div class="contactDetails">
-                            <h4>phone number</h4>
-                            <p>(416) 824-4457</p>
+                            <h3>phone number</h3>
+                            <a itemprop="telephone" content="+61401129582" href="tel:61401129582">+61 401 129 582</a>
                         </div>
                     </div>
                     <div class="contactInfo">
                         <figure aria-hidden="true">
-                            <img class="filter" src="styles/assets/icons/mail-outline.svg" alt="mail icon" />
+                            <img width="40" height="40" class="filter" src="styles/assets/icons/mail-outline.svg"
+                                alt="mail icon" />
                         </figure>
                         <div class="contactDetails">
-                            <h4>email address</h4>
-                            <p>inga.web.developer@gmail.com</p>
+                            <h3>email address</h3>
+                            <a href="mailto:inga.web.developer@gmail.com">inga.web.developer@gmail.com</a>
                         </div>
                     </div>
                 </div>
                 <!-- Icons, links open in separate pages -->
                 <ul class="icons">
+                    <li>
+                        <a href="https://github.com/ingalin" target="_blank" rel="noopener"
+                            aria-label="Inga's GitHub page">
+                            <i class="fa fa-github" aria-hidden="true"></i>
+
+                        </a>
+                    </li>
                     <li>
                         <a href="https://www.linkedin.com/in/inga-locmele-web-developer" target="_blank" rel="noopener"
                             aria-label="Inga's Linkedin page">
@@ -423,7 +570,7 @@
                         <a href="#skills">skills</a>
                     </li>
                     <li>
-                        <a href="projects.html">projects</a>
+                        <a href="#portfolio">portfolio</a>
                     </li>
                     <li>
                         <a href="#contact">contact</a>
@@ -433,15 +580,17 @@
         </footer>
         <div class="copyright">
             <div class="copyrightBorder">
-                <p>@ Design by Croshow</p>
-                <p>@ Photos by Inga Locmele</p>
+                <p>Copyright 2023</p>
             </div>
         </div>
     </div>
-    <script src='https://code.jquery.com/jquery-3.5.1.js'
-        integrity='sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=' crossorigin='anonymous'></script>
-    <script src="flickity.js"></script>
-    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var slideInElement = document.getElementsByClassName("headerText")[0];
+            slideInElement.classList.add("slideIn");
+        }, false);
+
+    </script>
 </body>
 
 </html>

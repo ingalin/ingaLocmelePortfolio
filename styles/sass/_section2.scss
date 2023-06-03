@@ -1,62 +1,190 @@
 // Section2
 .section2 {
-    min-height: 600px;
     display: flex;
     justify-content: space-between;
+    position: relative;
 }
 
-.section2 .box {
-    width: calc(50% - 430px);
-    height: 550px;
+.section2 {
+    @include minMediaQ($xStd) {
+
+        &:after,
+        &:before {
+            content: "";
+            display: block;
+            border-width: 2rem 0 2rem 2rem;
+            border-style: solid;
+            border-image-slice: 1;
+            position: absolute;
+            right: 0;
+            opacity: 0.6;
+        }
+
+
+        &:after {
+            width: 5%;
+            height: calc(30% + 20rem);
+            border-image-source: linear-gradient(-135deg, $text 15%, $accentColor);
+            z-index: 3;
+            top: -8rem;
+
+            @include mediaQ($tablet) {
+                width: 6rem;
+                height: 24rem;
+            }
+        }
+
+        &:before {
+            top: 0;
+            width: calc(5% + 6rem);
+            height: 30%;
+            border-image-source: linear-gradient(135deg, rgba($text, 0.5) 35%, rgba($backgroundDark, 0.3));
+            z-index: 2;
+
+            @include mediaQ($tablet) {
+                width: 10rem;
+                height: 18rem;
+            }
+        }
+    }
 }
 
-.section2 .box1 {
-    border-width: 0 0 20px 20px; 
-    border-style: solid;
-    border-image-source: linear-gradient(-135deg, $headerColor 15%, $accentColor);
-    border-image-slice: 1;
-}
-
-.box figure {
-    margin: 190px 0 0 -100px;
-    width: calc(5% + 370px);
-    display: flex;
-}
 
 // Skills
 .skills {
-    width: 1000px;
-    margin-left: auto;
+    max-width: 112rem;
+    width: 100%;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 50px 0;
+    padding: 10rem 2rem;
+
+    @include mediaQ($xStd) {
+        padding: 4rem 2rem 6rem;
+    }
+
+    @include mediaQ(530px) {
+        padding-bottom: 4rem;
+    }
+
     figure {
-        width: 120px;
+        width: 12rem;
         margin: 0;
         height: 50%;
         display: flex;
         justify-content: center;
+
+        img {
+            width: 8rem;
+            height: 8rem;
+            object-fit: contain;
+        }
     }
-    h3 {
-        margin-bottom: 60px;
+
+    p {
+        margin-top: 1.5rem;
+        max-width: 14rem;
+
+        @include mediaQ(350px) {
+            font-size: 1.6rem;
+        }
+    }
+
+    @include minMediaQ($xStd) {
+
+        &:after,
+        &:before {
+            content: "";
+            display: block;
+            border-width: 2rem 2rem 2rem 0;
+            border-style: solid;
+            border-image-slice: 1;
+            position: absolute;
+            left: 0;
+
+            opacity: 0.6;
+
+            @include mediaQ(1190px) {
+                display: none;
+            }
+        }
+
+        &:after {
+            width: 5%;
+            height: 30%;
+            border-image-source: linear-gradient(-135deg, $accentColor 15%, $text);
+            z-index: 3;
+            bottom: 5rem;
+
+            @include mediaQ($tablet) {
+                width: 5rem;
+                height: 12rem;
+            }
+        }
+
+        &:before {
+            width: calc(5% + 8rem);
+            height: calc(30% + 8rem);
+            border-image-source: linear-gradient(135deg, rgba($backgroundDark, 0.3) 1%, rgba($text, 0.5));
+            z-index: 2;
+            bottom: 11rem;
+
+            @include mediaQ($tablet) {
+                width: 11rem;
+                height: 18rem;
+            }
+        }
     }
 }
 
 .skillSets {
-    width: 75%;
+    position: relative;
+    z-index: 4;
     display: flex;
     justify-content: space-between;
-    margin-left: -25px;
+    flex-wrap: wrap;
+
+    @include mediaQ($tablet) {
+        width: 100%;
+    }
+
+    &:not(:last-child) {
+        @include minMediaQ(600px) {
+            margin-bottom: 6rem;
+        }
+    }
+
+    @include mediaQ(600px) {
+        row-gap: 2rem;
+        column-gap: 0.5rem;
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
+
+    @include mediaQ(350px) {
+        gap: 1rem;
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
 }
 
 .eachSkill {
     display: flex;
     flex-direction: column;
-    width: calc(17% - 8px);
+    width: calc(25% - .8rem);
     align-items: center;
     text-align: center;
+
+    p {
+        @extend h4;
+    }
+
+    @include mediaQ(600px) {
+        width: calc(50% - .5rem);
+    }
 }
-
-
-

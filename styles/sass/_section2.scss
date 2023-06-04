@@ -188,3 +188,48 @@
         width: calc(50% - .5rem);
     }
 }
+
+// Animations
+
+@keyframes animateSkills {
+
+    10%,
+    90% {
+        transform: translate3d(-.1rem, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(.2rem, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-.4rem, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(.4rem, 0, 0);
+    }
+}
+
+
+
+.eachSkill figure:hover,
+.eachSkill figure:focus {
+    animation: animateSkills 0.82s cubic-bezier(.36, .07, .19, .97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 100rem;
+}
+
+// Fill the color of icons
+.filter {
+    filter: invert(47%) sepia(87%) saturate(4487%) hue-rotate(4deg) brightness(94%) contrast(94%);
+}
+
+.filterWhite {
+    filter: brightness(0) invert(1);
+}

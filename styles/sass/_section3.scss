@@ -130,17 +130,22 @@
 
   h3 {
     font-size: 2rem;
-    transition: all cubic-bezier(.4, 0, .2, 1) 1s;
+
+    @include minMediaQ($xSm) {
+      transition: all cubic-bezier(.4, 0, .2, 1) 1s;
+    }
 
     @include mediaQ($xSm) {
       margin-bottom: 1.5rem;
     }
   }
 
-  .readMore,
-  .readMoreProject {
-    transition: all cubic-bezier(.4, 0, .2, 1) 1s;
+  @include minMediaQ($xSm) {
 
+    .readMore,
+    .readMoreProject {
+      transition: all cubic-bezier(.4, 0, .2, 1) 1s;
+    }
   }
 
   .readMore {
@@ -183,7 +188,11 @@
       object-fit: cover;
       width: 100%;
       height: 100%;
-      transition: all ease-in 0.4s;
+
+      @include minMediaQ($xSm) {
+        transition: all ease-in 0.4s;
+      }
+
       object-position: top;
 
       @include minMediaQ($xStd) {
@@ -323,8 +332,6 @@
       margin-bottom: 2rem;
       color: $accentColor;
       font-weight: 700;
-      transition: none;
-      will-change: transform;
 
       @include mediaQ(360px) {
         margin-bottom: 1rem;

@@ -84,6 +84,7 @@ nav ul {
                 align-items: center;
                 color: $text;
                 text-decoration: none;
+                margin: 0.2rem;
 
                 i {
                     font-size: 4rem;
@@ -118,7 +119,6 @@ nav ul {
             display: none;
             position: absolute;
             top: 0;
-            left: 0;
             right: 0;
             z-index: 1;
             margin: 0;

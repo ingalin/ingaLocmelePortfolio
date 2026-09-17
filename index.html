@@ -1,484 +1,749 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Inga Locmele's Portfolio">
-    <title>Inga Locmele's Portfolio</title>
-    <script src="https://kit.fontawesome.com/d50e3b07e2.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <meta name="description"
+        content="Inga Locmele is a frontend web developer on the Gold Coast, Australia, creating responsive, accessible websites, custom CMS builds and online stores.">
+    <title>Inga Locmele | Frontend Web Developer, Gold Coast</title>
+    <link rel="canonical" href="https://www.ingalocmele.com/">
+    <meta name="theme-color" content="#232323">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_AU">
+    <meta property="og:site_name" content="Inga Locmele">
+    <meta property="og:title" content="Inga Locmele | Frontend Web Developer, Gold Coast">
+    <meta property="og:description"
+        content="Inga Locmele is a frontend web developer on the Gold Coast, Australia, creating responsive, accessible websites, custom CMS builds and online stores.">
+    <meta property="og:url" content="https://www.ingalocmele.com/">
+    <meta property="og:image" content="https://www.ingalocmele.com/styles/assets/web-developer-gold-coast.jpg">
+    <meta property="og:image:alt" content="Inga Locmele, frontend web developer">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Inga Locmele | Frontend Web Developer, Gold Coast">
+    <meta name="twitter:description"
+        content="Inga Locmele is a frontend web developer on the Gold Coast, Australia, creating responsive, accessible websites, custom CMS builds and online stores.">
+    <meta name="twitter:image" content="https://www.ingalocmele.com/styles/assets/web-developer-gold-coast.jpg">
+    <meta name="twitter:image:alt" content="Inga Locmele, frontend web developer">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <script src="https://kit.fontawesome.com/d50e3b07e2.js" defer crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/vendor/splide-core.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Poppins:wght@400;600;700&display=swap"
         rel="stylesheet">
+
+
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@graph": [
+        {
+            "@type": "Person",
+            "@id": "https://www.ingalocmele.com/#person",
+            "name": "Inga Locmele",
+            "url": "https://www.ingalocmele.com/",
+            "jobTitle": "Frontend Web Developer",
+            "image": "https://www.ingalocmele.com/styles/assets/web-developer-gold-coast.jpg",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Gold Coast",
+                "addressRegion": "QLD",
+                "addressCountry": "AU"
+            },
+            "sameAs": [
+                "https://www.linkedin.com/in/inga-locmele-web-developer",
+                "https://github.com/ingalin",
+                "https://www.instagram.com/inga.lin"
+            ]
+        },
+        {
+            "@type": "WebSite",
+            "@id": "https://www.ingalocmele.com/#website",
+            "url": "https://www.ingalocmele.com/",
+            "name": "Inga Locmele | Frontend Web Developer",
+            "inLanguage": "en-AU",
+            "publisher": {
+                "@id": "https://www.ingalocmele.com/#person"
+            }
+        },
+        {
+            "@type": "WebPage",
+            "@id": "https://www.ingalocmele.com/#webpage",
+            "url": "https://www.ingalocmele.com/",
+            "name": "Inga Locmele | Frontend Web Developer, Gold Coast",
+            "description": "Inga Locmele is a frontend web developer on the Gold Coast, Australia, creating responsive, accessible websites, custom CMS builds and online stores.",
+            "isPartOf": {
+                "@id": "https://www.ingalocmele.com/#website"
+            },
+            "about": {
+                "@id": "https://www.ingalocmele.com/#person"
+            },
+            "inLanguage": "en-AU"
+        }
+    ]
+}
+    </script>
 </head>
 
 <body>
+    <a class="skipLink" href="#main">Skip to content</a>
     <header class="indexHeader" id="home">
-        <nav class="wrapper headerMenuDrop">
-            <!-- Mobile menu -->
-            <ul class="mobileMenu">
-                <li tabindex="0" class="tabLiSafari">
-                    <!-- Button for mobile menu only -->
-                    <button>
-                        <i class="fas fa-bars" aria-hidden="true"></i>
-                        <span>menu</span>
-                    </button>
-                    <!-- Desktop menu -->
-                    <ul class="mobileSubMenu">
-                        <li>
-                            <a href="#home"><span class="activeNav">home</span></a>
-                        </li>
-                        <li>
-                            <a href="#about">about</a>
-                        </li>
-                        <li>
-                            <a href="#skills">skills</a>
-                        </li>
-                        <li>
-                            <a href="#portfolio">portfolio</a>
-                        </li>
-                        <li>
-                            <a href="#contact">contact</a>
-                        </li>
-                    </ul>
-                </li>
+        <nav class="wrapper headerMenuDrop" aria-label="Main navigation">
+            <button type="button" id="menuToggle" aria-controls="mainMenu" aria-expanded="false">
+                <span class="menuIcon" aria-hidden="true"></span>
+                <span class="menuLabel sr-only">Menu</span>
+            </button>
+            <ul class="mobileSubMenu" id="mainMenu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-        <img src="styles/assets/IMG_1297.webp" alt="photo of Toronto, Canada" width="2543" height="1007">
+        <img src="styles/assets/toronto-canada-image.webp" alt="" width="2543" height="1007" fetchpriority="high">
         <div class="wrapper headerText">
             <div class="headings">
-                <h2>Hello,</h2>
-                <h1>I'm Inga, A Frontend Web Developer</h1>
+                <p class="greeting">Hello,</p>
+                <h1>I'm Inga, a Frontend Web Developer</h1>
                 <div class="readMore">
-                    <a class="link-text" href="#about" class="linkToAbout">Read More</a>
+                    <a class="link-text linkToAbout" href="#about">Read More</a>
                 </div>
             </div>
         </div>
     </header>
-    <main>
+    <main id="main" tabindex="-1">
         <section class="aboutSection" id="about">
             <div class="wrapper aboutSectionImgText">
                 <div class="aboutImg">
                     <figure class="box box1">
-                        <img src="styles/assets/IMG_1363.jpg" width="250" height="375"
-                            alt="Photo of Inga, web developer" />
+                        <img src="styles/assets/web-developer-gold-coast.jpg" width="250" height="375"
+                            alt="Inga Locmele, frontend web developer on the Gold Coast" loading="lazy" />
                     </figure>
                 </div>
                 <div class="aboutText">
                     <div>
                         <h2 class="h2side">About Me</h2>
-                        <p class="leadin">My name is Inga Locmele, and I am a frontend web developer with over 3 years
-                            of professional experience.
-                            Currently, I work remotely for Delta4 Digital Inc., a digital marketing company
-                            based in Ontario, Canada.</p>
-                        <p>At Delta4 Digital Inc., our primary focus is building websites for clients across Canada and
-                            the United States, utilizing Tymbrel CMS as our foundation.
-                            We provide a comprehensive range of services, including both template-based and fully
-                            custom-built websites.</p>
-                        <p>Last year, Delta4 Digital Inc. launched over 500 websites with just two frontend developers.
-                            This achievement highlights the exceptional productivity and expertise of our frontend
-                            development team.</p>
-                        <p>In addition to my frontend skills, I have a solid background in database administration and
-                            information management.
-                            With over 10 years of experience in this field, I have also gained valuable leadership
-                            abilities by leading a team of 10 employees.</p>
-                        <p>Furthermore, my passion for photography greatly enhances my ability to work with diverse UI
-                            designs. This hobby has honed my eye for visual aesthetics,
-                            composition, and attention to detail, enabling me to create visually captivating and
-                            user-friendly interfaces.</p>
-                        <p>The combination of technical skills and creative sensibility derived from my photography
-                            background sets me apart in delivering exceptional frontend experiences.</p>
+
+
+                        <p class="leadin">
+                            My name is Inga Locmele, and I’m a self-employed frontend web developer based on the Gold
+                            Coast,
+                            Australia, with <span id="frontendExperience">6+ years</span> of professional experience.
+                        </p>
+
+                        <p>
+                            I take on independent website projects and also work remotely with Delta4
+                            Digital Inc., a digital marketing company based in Ontario, Canada. I joined
+                            Delta4 while living in Canada and have remained part of the team since
+                            relocating to Australia.
+                        </p>
+
+                        <p>
+                            Through Delta4, I’ve contributed to hundreds of websites for businesses across
+                            Canada and the United States, ranging from template-based builds to fully
+                            customised sites with more complex frontend requirements.
+                        </p>
+
+                        <p>
+                            I focus on creating responsive, accessible and user-friendly websites, with
+                            clean code and a consistent design.
+                        </p>
+
+                        <p>
+                            Before moving into web development, I spent more than 10 years in database
+                            administration and information management, including leading a team of 10
+                            employees.
+                        </p>
+
+                        <p>
+                            My background in photography has strengthened my eye for composition, balance
+                            and visual detail. This shapes my approach to web design and development.
+                        </p>
                     </div>
+
+
                 </div>
+
+
             </div>
         </section>
         <section class="section2" id="skills">
-            <div class="skills">
-                <h2 class="h2center">My Skills</h2>
-                <div class="skillSets">
-                    <div class="eachSkill">
-                        <figure aria-hidden="true">
-                            <img width="1" height="1" class="filter" src="styles/assets/icons/logo-html5.svg"
-                                alt="html5 icon" />
-                        </figure>
-                        <p>HTML5</p>
-                    </div>
-                    <div class="eachSkill">
-                        <figure aria-hidden="true">
-                            <img width="1" height="1" class="filter" src="styles/assets/icons/logo-css3.svg"
-                                alt="cdd3 icon" />
-                        </figure>
-                        <p>CSS3</p>
-                    </div>
-                    <div class="eachSkill">
-                        <figure aria-hidden="true">
-                            <img width="1" height="1" style="height:9rem;" class="filter"
-                                src="styles/assets/icons/logo-sass.svg" alt="sass icon" />
-                        </figure>
-                        <p>SASS</p>
-                    </div>
-                    <div class="eachSkill">
-                        <figure aria-hidden="true">
-                            <img width="7" height="8" style="width:6.5rem;" class="filter"
-                                src="styles/assets/icons/kisspng-computer-icons-download-photoshop-logo-5b51d10ca42e14.7045128115320885886725.png"
-                                alt="photoshop icon" />
-                        </figure>
-                        <p>Photoshop</p>
-                    </div>
-                </div>
-                <div class="skillSets">
-                    <div class="eachSkill">
-                        <figure aria-hidden="true">
-                            <img width="1" height="1" class="filter" src="styles/assets/icons/logo-javascript.svg"
-                                alt="JS icon" />
-                        </figure>
-                        <p>JavaScript</p>
-                    </div>
-                    <div class="eachSkill">
-                        <figure aria-hidden="true">
-                            <img width="1" height="1" class="filter"
-                                src="styles/assets/icons/kisspng-computer-icons-jquery-ninja-icon-5b48a418f30935.1403011215314872569955.png"
-                                alt="jquery icon" />
-                        </figure>
-                        <p>jQuery</p>
-                    </div>
-                    <div class="eachSkill">
-                        <figure aria-hidden="true">
-                            <img width="1" height="1" style="width:11rem;height:11rem;" class="filter"
-                                src="styles/assets/icons/logo-react.svg" alt="react icon" />
-                        </figure>
-                        <p>REACT</p>
-                    </div>
 
-                    <div class="eachSkill">
-                        <figure aria-hidden="true">
-                            <img width="1" height="1" class="filter" src="styles/assets/icons/logo-github.svg"
-                                alt="github icon" />
-                        </figure>
-                        <p>GitHub</p>
-                    </div>
+            <section class="skills">
+                <div class="container">
+                    <h2 class="h2center">My Skills</h2>
 
+                    <div class="skillGroups">
+
+                        <div class="skillGroup">
+                            <span class="skillNumber">01</span>
+                            <h3>Frontend Development</h3>
+
+                            <div class="skillTags">
+                                <span>HTML5</span>
+                                <span>Semantic HTML</span>
+                                <span>CSS3</span>
+                                <span>Sass / SCSS</span>
+                                <span>JavaScript</span>
+                                <span>jQuery</span>
+                                <span>REACT</span>
+                            </div>
+                        </div>
+
+                        <div class="skillGroup">
+                            <span class="skillNumber">02</span>
+                            <h3>Web Development</h3>
+
+                            <div class="skillTags">
+                                <span>Custom Websites</span>
+                                <span>Shopify</span>
+                                <span>CMS Development</span>
+                                <span>Static Websites</span>
+                                <span>Website Maintenance</span>
+                            </div>
+                        </div>
+
+                        <div class="skillGroup">
+                            <span class="skillNumber">03</span>
+                            <h3>Quality &amp; Optimisation</h3>
+
+                            <div class="skillTags">
+                                <span>Responsive Development</span>
+                                <span>Web Accessibility</span>
+                                <span>Cross-Browser Testing</span>
+                                <span>Frontend Debugging</span>
+                                <span>Website Performance</span>
+                                <span>SEO</span>
+                                <span>Structured Data</span>
+                            </div>
+                        </div>
+
+                        <div class="skillGroup">
+                            <span class="skillNumber">04</span>
+                            <h3>Tools &amp; Platforms</h3>
+
+                            <div class="skillTags">
+                                <span>Git &amp; GitHub</span>
+                                <span>Netlify</span>
+                                <span>Cloudflare</span>
+                                <span>Google Analytics</span>
+                                <span>Google Search Console</span>
+                                <span>Google Business Profile</span>
+                                <span>SEO Auditing</span>
+                                <span>Photoshop</span>
+                                <span>Adobe XD</span>
+                                <span>Adobe Illustrator</span>
+                                <span>Figma</span>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
-                <div class="skillSets">
-                    <div class="eachSkill">
-                        <figure aria-hidden="true">
-                            <img width="1" height="1" style="width:7rem;" class="filter"
-                                src="styles/assets/icons/kisspng-microsoft-sql-server-microsoft-azure-sql-database-plsql-5b1ef237023ba0.8678771915287547430092.png"
-                                alt="sql icon" />
-                        </figure>
-                        <p>SQL</p>
-                    </div>
-                    <div class="eachSkill">
-                        <figure aria-hidden="true">
-                            <img width="1" height="1" class="filter" src="styles/assets/icons/logo-firebase.svg"
-                                alt="firebase icon" />
-                        </figure>
-                        <p>Firebase</p>
-                    </div>
-                    <div class="eachSkill">
-                        <figure aria-hidden="true">
-                            <img width="1" height="1" class="filter"
-                                src="styles/assets/icons/kisspng-responsive-web-design-web-development-respond-5b20abb64b5cf9.4984798815288677663087.png"
-                                alt="responsive design icon" />
-                        </figure>
-                        <p>Responsive Design</p>
-                    </div>
-                    <div class="eachSkill">
-                        <figure aria-hidden="true">
-                            <img width="1" height="1" style="height:7rem;" class="filter"
-                                src="styles/assets/icons/accessibility-outline.svg" alt="accessible websites icon" />
-                        </figure>
-                        <p>Accessible Websites</p>
-                    </div>
-                </div>
-            </div>
+            </section>
         </section>
         <div class="section3Background" id="portfolio">
-            <section class="section3 wrapper">
+            <section class="section3 portfolioSection">
 
-                <h2 class="h2center">Portfolio</h2>
-                <div class="projectList projectListFirst">
-                    <div class="row-8">
+                <h2 class="h2center" id="portfolioHeading">Portfolio</h2>
 
-                        <div class="eachProject">
-                            <figure>
-                                <img src="styles/assets/new-templates.jpg" alt="New Tymbrel templates" width="1080"
-                                    height="570">
-                            </figure>
+                <div class="splide portfolioSlider" id="portfolioSlider" aria-labelledby="portfolioHeading">
+                    <div class="splide__track">
+                        <ul class="splide__list">
 
-
-
-                            <div class="projectDescription">
-                                <h3>New Tymbrel CMS template</h3>
-                                <div class="readMore">
-                                    <button class="link-text">Read more</button>
-                                </div>
-                                <div class="readMoreProject">
-                                    <ul class="programsUsed">
-                                        <li>CMS</li>
-                                        <li>jQuery</li>
-                                        <li>SASS</li>
-                                        <li>Smarty</li>
-                                    </ul>
-                                    <p>One of my major projects at Delta4 Digital was designing and implementing over 80
-                                        master templates, prioritizing responsiveness for seamless adaptation across
-                                        different screen sizes and text lengths.</p>
-                                    <p>In contrast to our older template, I improved the internal template setup by
-                                        integrating new JS code, enabling easy mixing and matching of various template
-                                        components.</p>
-                                    <p>Furthermore, I added these templates to the Tymbrel CMS using Smarty, empowering
-                                        content managers to efficiently manage and update the templates within the CMS
-                                        environment.</p>
+                            <li class="splide__slide">
+                                <div class="row-4 eachProject">
                                     <figure>
-                                        <img src="styles/assets/new-templates.png" alt="New tymbrel templates"
-                                            width="423" height="244">
+                                        <img src="styles/assets/tymbrel-cms-templates.jpg" alt="Tymbrel CMS templates"
+                                            width="423" height="381" loading="lazy">
                                     </figure>
 
-                                </div>
-                            </div>
-                        </div>
+                                    <div class="projectDescription">
+                                        <h3>Tymbrel CMS Templates</h3>
 
-                    </div>
-                    <div class="row-4">
-                        <div class="eachProject">
-                            <figure>
-                                <img width="510" height="570" src="styles/assets/job-search.jpg"
-                                    alt="Job Search Website" />
-                            </figure>
-                            <div class="projectDescription">
-                                <h3>Job Search Website</h3>
-                                <div class="readMore">
-                                    <button class="link-text">Read more</button>
-                                </div>
-                                <div class="readMoreProject">
-                                    <ul class="programsUsed">
-                                        <li>REACT</li>
-                                        <li>Firebase</li>
-                                        <li>CSS3</li>
-                                    </ul>
-                                    <p>This REACT project was developed during my studies at Juno College. I completed
-                                        all the REACT coding in less than a week! The project utilizes the Adzuna API as
-                                        its foundation, and all information is stored in Firebase. It offers several
-                                        features:</p>
-                                    <ul class="featuresList">
-                                        <li>Location and keyword-based search</li>
-                                        <li>User account registration</li>
-                                        <li>Ability to save favorite jobs</li>
-                                        <li>Remove saved listings</li>
-                                        <li>Pagination</li>
-                                        <li>Error handling</li>
-                                    </ul>
-                                    <div class="linksToProjects">
-                                        <a target="_blank" rel="noopener"
-                                            href="https://master--fluffy-creponne-7e8f15.netlify.app/">View Live</a>
-                                        <span>||</span>
-                                        <a target="_blank" rel="noopener"
-                                            href="https://github.com/ingalin/jobSearchWebsite.git">GitHub</a>
+                                        <div class="readMore">
+                                            <button type="button" class="link-text"
+                                                aria-label="Read more about Tymbrel CMS Templates">Read
+                                                More</button>
+                                        </div>
+
+                                        <div class="projectReveal">
+                                            <div class="readMoreProject">
+                                                <ul class="programsUsed">
+                                                    <li>Smarty</li>
+                                                    <li>JavaScript</li>
+                                                    <li>jQuery</li>
+                                                    <li>Sass</li>
+                                                </ul>
+
+                                                <p>
+                                                    A collection of reusable Tymbrel CMS templates built for different
+                                                    layouts,
+                                                    content types and screen sizes, with flexible sections for a range
+                                                    of projects.
+                                                </p>
+
+                                                <p>
+                                                    At Delta4 Digital, I created and maintained shared components and
+                                                    page structures
+                                                    to keep development consistent, reduce repeated work and make builds
+                                                    easier to manage.
+                                                </p>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            </li>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="projectList projectListSecond">
-                    <div class="row-3 eachProject">
-                        <figure>
-                            <img width="423" height="381" src="styles/assets/straight-smiles.jpg"
-                                alt="Straight Smile Centres" />
-                        </figure>
-                        <div class="projectDescription">
-                            <h3>Straight Smile Centres</h3>
-                            <div class="readMore">
-                                <button class="link-text">Read more</button>
-                            </div>
-                            <div class="readMoreProject">
-                                <ul class="programsUsed">
-                                    <li>CMS</li>
-                                    <li>jQuery</li>
-                                    <li>SASS</li>
-                                    <li>Smarty</li>
-                                </ul>
-                                <p>I'm currently developing a custom website at Delta4 Digital, collaborating closely
-                                    with the backend team. We've achieved significant improvements in the site's page
-                                    speed and CLS by removing unnecessary JS code and implementing optimized CSS code
-                                    with Tymbrel variables. This efficient and reusable code will enhance performance
-                                    for future websites.</p>
-                                <p>The website will be launching soon, and I can't wait to share it with you!</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row-3 eachProject">
-                        <figure>
-                            <img width="423" height="381" src="styles/assets/geography-quiz.jpg" alt="Geography Quiz" />
-                        </figure>
-                        <div class="projectDescription">
-                            <h3>Geography Quiz</h3>
-                            <div class="readMore">
-                                <button class="link-text">Read more</button>
-                            </div>
-                            <div class="readMoreProject">
-                                <ul class="programsUsed">
-                                    <li>JQuery</li>
-                                    <li>SASS</li>
-                                    <li>Design</li>
-                                </ul>
-                                <p>Introducing a Geography Game suitable for all ages.</p>
-                                <p>Each game features 30 simple questions randomly selected from a pool of 55. The
-                                    answers to each question are presented in a randomized order.</p>
-                                <p>With a limit of 2 mistakes allowed and decreasing time per level, don't fret!
-                                    Reaching a new level earns you bonus points. Keep an eye out for globes and stars!
-                                </p>
-                                <div class="linksToProjects" style="margin-top:2.3rem;">
-                                    <a target="_blank" rel="noopener"
-                                        href="https://quizzical-gates-8f222d.netlify.app/">View Live</a>
-                                    <span>||</span>
-                                    <a target="_blank" rel="noopener"
-                                        href="https://github.com/ingalin/geographyQuiz">GitHub</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row-3 eachProject">
-                        <figure>
-                            <img src="styles/assets/pure-medical.jpg" alt="Pure Medical Cosmetics website" width="423"
-                                height="381">
-                        </figure>
-                        <div class="projectDescription">
-                            <h3>Pure Medical Cosmetics</h3>
-                            <div class="readMore">
-                                <button class="link-text">Read more</button>
-                            </div>
-                            <div class="readMoreProject">
-                                <ul class="programsUsed">
-                                    <li>CMS</li>
-                                    <li>jQuery</li>
-                                    <li>SASS</li>
-                                    <li>Smarty</li>
-                                </ul>
-                                <p>I contributed to the development of a custom-built website for Pure Medical
-                                    Cosmetics, an Ottawa-based clinic. As part of the Delta4 Digital team, I wrote CSS
-                                    and JS code for the templates and integrated them into the Tymbrel
-                                    platform. Together, we created a visually appealing and cohesive website, enabling
-                                    the clinic to establish a strong online presence and effectively engage
-                                    with their audience.</p>
+                            <li class="splide__slide">
+                                <div class="row-4 eachProject">
+                                    <figure>
+                                        <img width="423" height="381" src="styles/assets/geography-quiz.jpg"
+                                            alt="Geography Quiz" loading="lazy">
+                                    </figure>
 
-                                <div class="linksToProjects" style="margin-top:2.3rem;">
-                                    <a target="_blank" rel="noopener"
-                                        href="https://www.puremedicalcosmetics.com/site/home">View Live</a>
+                                    <div class="projectDescription">
+                                        <h3>Geography Quiz</h3>
+
+                                        <div class="readMore">
+                                            <button type="button" class="link-text"
+                                                aria-label="Read more about Geography Quiz">Read
+                                                More</button>
+                                        </div>
+
+                                        <div class="projectReveal">
+                                            <div class="readMoreProject">
+                                                <ul class="programsUsed">
+                                                    <li>jQuery</li>
+                                                    <li>Sass</li>
+                                                    <li>UI Design</li>
+                                                </ul>
+
+                                                <p>
+                                                    An interactive geography quiz with randomised questions, shuffled
+                                                    answers,
+                                                    timed rounds, multiple difficulty levels and a few hidden surprises.
+                                                </p>
+
+                                                <p>
+                                                    I designed and built the game, including scoring, bonus points, star
+                                                    rewards and hidden globes for players to discover.
+                                                </p>
+
+                                                <div class="linksToProjects" style="margin-top:2.3rem;">
+                                                    <a target="_blank" rel="noopener"
+                                                        href="https://quizzical-gates-8f222d.netlify.app/">View
+                                                        Live<span class="srOnly"> —
+                                                            Geography Quiz</span></a>
+                                                    <span>||</span>
+                                                    <a target="_blank" rel="noopener"
+                                                        href="https://github.com/ingalin/geographyQuiz">GitHub</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                        </div>
+                            </li>
+
+                            <li class="splide__slide">
+                                <div class="row-4 eachProject">
+                                    <figure>
+                                        <img width="423" height="381" src="styles/assets/nanooq-inuit-art-website.jpg"
+                                            alt="Nanooq Inuit Art online store" loading="lazy">
+                                    </figure>
+
+                                    <div class="projectDescription">
+                                        <h3>Nanooq Inuit Art</h3>
+
+                                        <div class="readMore">
+                                            <button type="button" class="link-text"
+                                                aria-label="Read more about Nanooq Inuit Art">Read
+                                                More</button>
+                                        </div>
+
+                                        <div class="projectReveal">
+                                            <div class="readMoreProject">
+                                                <ul class="programsUsed">
+                                                    <li>CMS</li>
+                                                    <li>E-commerce</li>
+                                                    <li>JavaScript</li>
+                                                    <li>Sass</li>
+                                                </ul>
+
+                                                <p>
+                                                    Nanooq Inuit Art is a Canadian online gallery and store showcasing
+                                                    Inuit
+                                                    prints, drawings, carvings and other original artwork.
+                                                </p>
+
+                                                <p>
+                                                    My front-end work focused on responsive layouts, accessibility,
+                                                    usability
+                                                    and creating a smoother shopping experience across the site.
+                                                </p>
+
+                                                <div class="linksToProjects" style="margin-top:2.3rem;">
+                                                    <a target="_blank" rel="noopener"
+                                                        href="https://www.nanooq.ca/site/home">View
+                                                        Live<span class="srOnly"> — Nanooq Inuit Art</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="splide__slide">
+                                <div class="row-3 eachProject">
+                                    <figure>
+                                        <img src="styles/assets/yvr-prep-website.jpg" alt="YVR Prep website" width="423"
+                                            height="381" loading="lazy">
+                                    </figure>
+
+                                    <div class="projectDescription">
+                                        <h3>YVR Prep</h3>
+
+                                        <div class="readMore">
+                                            <button type="button" class="link-text"
+                                                aria-label="Read more about YVR Prep">Read
+                                                More</button>
+                                        </div>
+
+                                        <div class="projectReveal">
+                                            <div class="readMoreProject">
+                                                <ul class="programsUsed">
+                                                    <li>CMS</li>
+                                                    <li>JavaScript</li>
+                                                    <li>jQuery</li>
+                                                    <li>Sass</li>
+                                                    <li>Smarty</li>
+                                                </ul>
+
+                                                <p>
+                                                    YVR Prep is a shared commercial kitchen in Vancouver that provides
+                                                    food
+                                                    businesses with kitchen space, equipment and practical resources.
+                                                </p>
+
+                                                <p>
+                                                    I handled the responsive front-end and CMS integration across the
+                                                    main
+                                                    website, including membership information and related content.
+                                                </p>
+
+                                                <div class="linksToProjects" style="margin-top:2.3rem;">
+                                                    <a target="_blank" rel="noopener"
+                                                        href="https://www.yvrprep.com/site/home">View
+                                                        Live<span class="srOnly"> — YVR Prep</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="splide__slide">
+                                <div class="row-4 eachProject">
+                                    <figure>
+                                        <img width="423" height="381"
+                                            src="styles/assets/nac-niagara-artists-centre-website.jpg"
+                                            alt="Niagara Artists Centre website" loading="lazy">
+                                    </figure>
+
+                                    <div class="projectDescription">
+                                        <h3>Niagara Artists Centre</h3>
+
+                                        <div class="readMore">
+                                            <button type="button" class="link-text"
+                                                aria-label="Read more about Niagara Artists Centre">Read
+                                                More</button>
+                                        </div>
+
+                                        <div class="projectReveal">
+                                            <div class="readMoreProject">
+                                                <ul class="programsUsed">
+                                                    <li>CMS</li>
+                                                    <li>JavaScript</li>
+                                                    <li>jQuery</li>
+                                                    <li>Sass</li>
+                                                    <li>Data Management</li>
+                                                </ul>
+
+                                                <p>
+                                                    Niagara Artists Centre is an arts organisation website featuring
+                                                    exhibitions, events, galleries and a wide range of community
+                                                    programming.
+                                                </p>
+
+                                                <p>
+                                                    I built the event and exhibition filters and set up
+                                                    spreadsheet-based
+                                                    uploads, making larger amounts of content easier to manage.
+                                                </p>
+
+                                                <div class="linksToProjects" style="margin-top:2.3rem;">
+                                                    <a target="_blank" rel="noopener"
+                                                        href="https://www.nac.org/site/home">View
+                                                        Live<span class="srOnly"> — Niagara Artists Centre</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="splide__slide">
+                                <div class="row-3 eachProject">
+                                    <figure>
+                                        <img src="styles/assets/pure-medical.jpg" alt="Pure Medical Cosmetics website"
+                                            width="423" height="381" loading="lazy">
+                                    </figure>
+
+                                    <div class="projectDescription">
+                                        <h3>Pure Medical Cosmetics</h3>
+
+                                        <div class="readMore">
+                                            <button type="button" class="link-text"
+                                                aria-label="Read more about Pure Medical Cosmetics">Read
+                                                More</button>
+                                        </div>
+
+                                        <div class="projectReveal">
+                                            <div class="readMoreProject">
+                                                <ul class="programsUsed">
+                                                    <li>CMS</li>
+                                                    <li>E-commerce</li>
+                                                    <li>jQuery</li>
+                                                    <li>Sass</li>
+                                                    <li>Smarty</li>
+                                                </ul>
+
+                                                <p>
+                                                    Pure Medical Cosmetics is an Ottawa-based medical aesthetics clinic
+                                                    with a
+                                                    custom website, treatment information and an integrated online
+                                                    store.
+                                                </p>
+
+                                                <p>
+                                                    I developed responsive layouts and CMS functionality across
+                                                    treatment,
+                                                    product and e-commerce pages, keeping the experience consistent
+                                                    throughout
+                                                    the site.
+                                                </p>
+
+                                                <div class="linksToProjects" style="margin-top:2.3rem;">
+                                                    <a target="_blank" rel="noopener"
+                                                        href="https://www.puremedicalcosmetics.com/site/home">View
+                                                        Live<span class="srOnly">
+                                                            — Pure Medical Cosmetics</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="splide__slide">
+                                <div class="row-3 eachProject">
+                                    <figure>
+                                        <img src="styles/assets/slurrytub-canada-usa-website.jpg"
+                                            alt="SLURRYTUB Canada website" width="510" height="328" loading="lazy">
+                                    </figure>
+
+                                    <div class="projectDescription">
+                                        <h3>SLURRYTUB Canada</h3>
+
+                                        <div class="readMore">
+                                            <button type="button" class="link-text"
+                                                aria-label="Read more about SLURRYTUB Canada">Read
+                                                More</button>
+                                        </div>
+
+                                        <div class="projectReveal">
+                                            <div class="readMoreProject">
+                                                <ul class="programsUsed">
+                                                    <li>CMS</li>
+                                                    <li>E-commerce</li>
+                                                    <li>JavaScript</li>
+                                                    <li>Sass</li>
+                                                    <li>Smarty</li>
+                                                </ul>
+
+                                                <p>
+                                                    SLURRYTUB Canada is an e-commerce website for the construction
+                                                    industry,
+                                                    featuring product information, distributor details and online
+                                                    ordering.
+                                                </p>
+
+                                                <p>
+                                                    I built the responsive front-end and integrated CMS and shopping
+                                                    functionality to support product browsing and online purchases.
+                                                </p>
+
+                                                <div class="linksToProjects" style="margin-top:2.3rem;">
+                                                    <a target="_blank" rel="noopener"
+                                                        href="https://www.slurrytub.ca/site/home">View
+                                                        Live<span class="srOnly"> — SLURRYTUB Canada</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="splide__slide">
+                                <div class="row-3 eachProject">
+                                    <figure>
+                                        <img src="styles/assets/niagara-river-lions-website.jpg"
+                                            alt="Niagara River Lions online store" width="510" height="328"
+                                            loading="lazy">
+                                    </figure>
+
+                                    <div class="projectDescription">
+                                        <h3>Niagara River Lions Store</h3>
+
+                                        <div class="readMore">
+                                            <button type="button" class="link-text"
+                                                aria-label="Read more about Niagara River Lions Store">Read
+                                                More</button>
+                                        </div>
+
+                                        <div class="projectReveal">
+                                            <div class="readMoreProject">
+                                                <ul class="programsUsed">
+                                                    <li>CMS</li>
+                                                    <li>E-commerce</li>
+                                                    <li>JavaScript</li>
+                                                    <li>Sass</li>
+                                                    <li>Smarty</li>
+                                                </ul>
+
+                                                <p>
+                                                    The Niagara River Lions online store offers team apparel, jerseys
+                                                    and
+                                                    accessories, with products organised to make browsing simple for
+                                                    fans.
+                                                </p>
+
+                                                <p>
+                                                    I developed the store's responsive interface and e-commerce
+                                                    features,
+                                                    including product browsing, search, customer accounts and the
+                                                    shopping cart.
+                                                </p>
+
+                                                <div class="linksToProjects" style="margin-top:2.3rem;">
+                                                    <a target="_blank" rel="noopener"
+                                                        href="https://www.shop.riverlions.ca/site/home">View
+                                                        Live<span class="srOnly"> — Niagara River Lions Store</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="splide__slide">
+                                <div class="row-3 eachProject">
+                                    <figure>
+                                        <img src="styles/assets/coastal-care-veterinary.jpg"
+                                            alt="Coastal Care Veterinary website" width="510" height="328"
+                                            loading="lazy">
+                                    </figure>
+
+                                    <div class="projectDescription">
+                                        <h3>Coastal Care Veterinary</h3>
+
+                                        <div class="readMore">
+                                            <button type="button" class="link-text"
+                                                aria-label="Read more about Coastal Care Veterinary">Read More</button>
+                                        </div>
+
+                                        <div class="projectReveal">
+                                            <div class="readMoreProject">
+                                                <ul class="programsUsed">
+                                                    <li>CMS</li>
+                                                    <li>JavaScript</li>
+                                                    <li>jQuery</li>
+                                                    <li>Sass</li>
+                                                </ul>
+
+                                                <p>
+                                                    Coastal Care Veterinary is an emergency and referral hospital
+                                                    website
+                                                    serving pet owners and veterinary professionals across Atlantic
+                                                    Canada.
+                                                </p>
+
+                                                <p>
+                                                    I developed responsive CMS pages for emergency care, specialist
+                                                    services,
+                                                    referrals and patient information, with clear access to key content.
+                                                </p>
+
+                                                <div class="linksToProjects" style="margin-top:2.3rem;">
+                                                    <a target="_blank" rel="noopener"
+                                                        href="https://www.coastalcarevets.ca/site/home">View
+                                                        Live<span class="srOnly"> — Coastal Care Veterinary</span></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
                     </div>
-                    <div class="row-3 eachProject">
-                        <figure>
-                            <img src="styles/assets/event-planner.jpg" alt="Event Planner" width="423" height="381">
-                        </figure>
-                        <div class="projectDescription">
-                            <h3>Event Planner</h3>
-                            <div class="readMore">
-                                <button class="link-text">Read more</button>
-                            </div>
-                            <div class="readMoreProject">
-                                <ul class="programsUsed">
-                                    <li>REACT</li>
-                                    <li>Firebase</li>
-                                    <li>SASS</li>
-                                    <li>Design</li>
-                                </ul>
-                                <p>I developed this fun REACT project called "NOT-SO-SOCIAL Event Planner" as part of a
-                                    team of four people during my studies at Juno College. It allows you to add unwanted
-                                    events and replace them with TV shows if you prefer.</p>
-                                <p>You can add or remove events and filter TV shows by genres. The site is built using
-                                    REACT, Firebase, and the TVMAZE API.</p>
-                                <div class="linksToProjects" style="margin-top:2.3rem;">
-                                    <a target="_blank" rel="noopener"
-                                        href="https://cranky-kilby-29816c.netlify.app/">View Live</a>
-                                    <span>||</span>
-                                    <a target="_blank" rel="noopener"
-                                        href="https://github.com/ingalin/ingaLocmeleProjectSix">GitHub</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row-3 eachProject">
-                        <figure>
-                            <img src="styles/assets/vets-without-borders.jpg" alt="Vets Without borders website"
-                                width="423" height="381">
-                        </figure>
-                        <div class="projectDescription">
-                            <h3>Veterinarians Without Borders</h3>
-                            <div class="readMore">
-                                <button class="link-text">Read more</button>
-                            </div>
-                            <div class="readMoreProject">
-                                <ul class="programsUsed">
-                                    <li>CMS</li>
-                                    <li>jQuery</li>
-                                    <li>SASS</li>
-                                </ul>
-                                <p>This is a custom website for Veterinarians Without Borders, a non-profit charitable
-                                    organization that focuses on animal health as a way to improve the health of
-                                    communities. The site is managed on the Tymbrel
-                                    platform by the client, and I have created custom home page templates for it.</p>
-                                <div class="linksToProjects" style="margin-top:2.3rem;">
-                                    <a target="_blank" rel="noopener"
-                                        href="https://www.vetswithoutborders.ca/site/home">View Live</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row-3 eachProject">
-                        <figure>
-                            <img src="styles/assets/king.jpg" alt="King & Bay Websit" width="423" height="381">
-                        </figure>
-                        <div class="projectDescription">
-                            <h3>King & Bay Website</h3>
-                            <div class="readMore">
-                                <button class="link-text">Read more</button>
-                            </div>
-                            <div class="readMoreProject">
-                                <ul class="programsUsed">
-                                    <li>CMS</li>
-                                    <li>jQuery</li>
-                                    <li>SASS</li>
-                                </ul>
-                                <p>
-                                    This is a client-managed website using custom Tymbrel templates. Despite its small
-                                    size, the website boasts multiple features such as two sliders, video integration,
-                                    pop-ups, and an online store. To meet the specific requirements, I developed
-                                    completely original slider JS code. It was a challenging project with a tight
-                                    deadline, but I successfully completed all the coding within 3 days.</p>
-                                <div class="linksToProjects" style="margin-top:2.3rem;">
-                                    <a target="_blank" rel="noopener"
-                                        href="https://www.kingandbaynftclothing.com/site/home">View Live</a>
-                                </div>
-                            </div>
-                        </div>
+
+                    <div class="splide__arrows portfolioArrows">
+                        <button class="splide__arrow splide__arrow--prev" type="button" aria-label="Previous project">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                fill="none" aria-hidden="true" focusable="false">
+                                <path d="M20 12H4m7-7-7 7 7 7" />
+                            </svg>
+                        </button>
+
+                        <button class="splide__arrow splide__arrow--next" type="button" aria-label="Next project">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                                fill="none" aria-hidden="true" focusable="false">
+                                <path d="M4 12h16m-7-7 7 7-7 7" />
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </section>
         </div>
+
+
+
+
     </main>
     <div class="footerBackground">
-        <img src="styles/assets/IMG_1489.webp" alt="background image of a city" width="1700" height="800">
+        <img src="styles/assets/toronto-canada-background.webp" alt="" width="1700" height="800" loading="lazy">
         <footer id="contact">
             <div class="wrapper">
-                <h2 class="h2center">Get In Touch</h2>
+                <h2 class="h2center">Get in Touch</h2>
+                <p class="formHint sr-only">Fields marked with * are required.</p>
                 <form action="https://formspree.io/f/xleopvdd" method="POST">
                     <div class="inputFields">
                         <div class="requiredFields">
                             <label for="name"><span class="srOnly">Your Name</span>*</label>
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                            <input type="text" id="name" name="name" autocomplete="name" placeholder="Your Name"
+                                required>
                         </div>
                         <div class="requiredFields">
-                            <label for="email"><span class="srOnly">Your E-mail</span>*</label>
-                            <input type="email" id="email" name="email" placeholder="Your E-mail" required>
+                            <label for="email"><span class="srOnly">Your Email</span>*</label>
+                            <input type="email" id="email" name="email" autocomplete="email" placeholder="Your Email"
+                                required>
                         </div>
                         <label for="tel" class="srOnly">Your Phone Number</label>
-                        <input type="tel" id="tel" name="tel" class="tel" placeholder="Your Phone Number">
+                        <input type="tel" id="tel" name="tel" class="tel" autocomplete="tel"
+                            placeholder="Your Phone Number">
                     </div>
                     <div class="textareaInput">
                         <label for="message"><span class="srOnly">Your Message</span>*</label>
@@ -493,7 +758,7 @@
                     <div class="contactInfo">
                         <figure aria-hidden="true">
                             <img width="40" height="40" class="filter" src="styles/assets/icons/location-outline.svg"
-                                alt="location icon" />
+                                alt="location icon" loading="lazy" />
                         </figure>
                         <div class="contactDetails">
                             <h3>location</h3>
@@ -503,17 +768,17 @@
                     <div class="contactInfo">
                         <figure aria-hidden="true">
                             <img width="40" height="40" class="filter" src="styles/assets/icons/call-outline.svg"
-                                alt="phone icon" />
+                                alt="phone icon" loading="lazy" />
                         </figure>
                         <div class="contactDetails">
                             <h3>phone number</h3>
-                            <a itemprop="telephone" content="+61401129582" href="tel:61401129582">+61 401 129 582</a>
+                            <a href="tel:+61401129582">+61 401 129 582</a>
                         </div>
                     </div>
                     <div class="contactInfo">
                         <figure aria-hidden="true">
                             <img width="40" height="40" class="filter" src="styles/assets/icons/mail-outline.svg"
-                                alt="mail icon" />
+                                alt="mail icon" loading="lazy" />
                         </figure>
                         <div class="contactDetails">
                             <h3>email address</h3>
@@ -523,16 +788,10 @@
                 </div>
                 <!-- Icons, links open in separate pages -->
                 <ul class="icons">
-                    <li>
-                        <a href="https://github.com/ingalin" target="_blank" rel="noopener"
-                            aria-label="Inga's GitHub page">
-                            <i class="fa fa-github" aria-hidden="true"></i>
 
-                        </a>
-                    </li>
                     <li>
                         <a href="https://www.linkedin.com/in/inga-locmele-web-developer" target="_blank" rel="noopener"
-                            aria-label="Inga's Linkedin page">
+                            aria-label="Inga's LinkedIn page">
                             <i aria-hidden="true" class="fab fa-linkedin-in"></i>
                         </a>
                     </li>
@@ -543,20 +802,16 @@
                         </a>
                     </li>
                     <li>
-                        <a href="https://twitter.com/ingalin1" target="_blank" rel="noopener"
-                            aria-label="Inga's Twitter page">
-                            <i aria-hidden="true" class="fab fa-twitter"></i>
+                        <a href="https://github.com/ingalin" target="_blank" rel="noopener"
+                            aria-label="Inga's GitHub page">
+                            <i class="fa fa-github" aria-hidden="true"></i>
+
                         </a>
                     </li>
-                    <li>
-                        <a href="https://www.facebook.com/inga.locmele.10/" target="_blank" rel="noopener"
-                            aria-label="Inga's Facebook page">
-                            <i aria-hidden="true" class="fab fa-facebook-f"></i>
-                        </a>
-                    </li>
+
                 </ul>
             </div>
-            <nav class="wrapper footerMenu">
+            <nav class="wrapper footerMenu" aria-label="Footer navigation">
                 <ul class="mobileSubMenu">
                     <li>
                         <a href="#home"><span class="activeNav">home</span></a>
@@ -578,11 +833,13 @@
         </footer>
         <div class="copyright">
             <div class="copyrightBorder">
-                <p>Copyright 2023</p>
+                <p>&copy; <span id="copyrightYear">2026</span> Inga Locmele</p>
             </div>
         </div>
     </div>
 
+    <script src="scripts/vendor/splide.min-min.js"></script>
+    <script src="scripts/main-min.js"></script>
 </body>
 
 

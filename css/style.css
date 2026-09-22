@@ -486,7 +486,7 @@ h4, .contact h3, .eachProject .projectDescription h3, .eachSkill p, .eachSkill .
 }
 @media screen and (max-width: 1366px) {
   .indexHeader {
-    min-height: 43.75rem;
+    min-height: 31.25rem;
   }
 }
 
@@ -556,6 +556,7 @@ header:after {
   .headings {
     padding: 3.75rem 1.25rem 5.3125rem 0;
     width: 100%;
+    margin-bottom: 3.75rem;
   }
 }
 @media screen and (max-width: 21.875rem) {
